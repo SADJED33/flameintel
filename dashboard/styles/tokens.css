@@ -1,0 +1,193 @@
+/* FlameIntel design tokens: the single source for the dashboard, taken from landing_spec.txt
+   (sections 2, 4, 5, 6, 8) and the finished public/landing/index.html. Tailwind reads these variables. */
+
+@font-face {
+  font-family: "InterVar";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/landing/assets/fonts/inter-var.woff2) format("woff2");
+}
+
+:root {
+  /* ---- base colours (spec section 2) ---- */
+  --bg: #000;
+  --ink: #fff;
+  --ink-nav: rgba(255, 255, 255, 0.91);
+  --ink-sub: rgba(255, 255, 255, 0.5);   /* LARGE text only (landing sub-headline) */
+  --ink-dim: rgba(255, 255, 255, 0.82);  /* body text on panels */
+  --ink-mute: rgba(255, 255, 255, 0.72); /* smallest text: never below .72 (contrast) */
+  --ink-dark: #000;
+  --hairline: rgba(255, 255, 255, 0.98);
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-line: rgba(255, 255, 255, 0.15);
+  --panel-bg: rgba(8, 8, 14, 0.66);      /* dense content: glass over a dark base so small text never sits on the artwork */
+  --focus: #9b8cff;
+
+  /* ---- accent palette, sampled from public/landing/assets/sky.png ---- */
+  --mint-rgb: 180 236 206;     /* #b4ecce  flame clouds */
+  --mint-deep-rgb: 90 131 116; /* #5a8374  shaded flame */
+  --violet-rgb: 111 68 229;    /* #6f44e5  cumulus highlights */
+  --violet-deep-rgb: 53 39 167;/* #3527a7  cumulus body */
+  --violet-ink-rgb: 190 172 255; /* light tint of the cumulus violet, for small text on dark */
+  --warm-rgb: 255 178 122;     /* the ONE warm colour: warnings and "Not in the data" */
+  --mint: rgb(var(--mint-rgb));
+  --violet: rgb(var(--violet-rgb));
+  --warm: rgb(var(--warm-rgb));
+
+  /* ---- shape and effects ---- */
+  --r-btn: 10px;
+  --r-pill: 999px;
+  --r-panel: 14px;
+  --blur-sm: blur(10px) saturate(140%);
+  --blur-lg: blur(18px) saturate(140%);
+  --shadow-pop: 0 18px 44px rgba(0, 0, 0, 0.55);
+
+  /* ---- motion ---- */
+  --e-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --e-nav: cubic-bezier(0.33, 1, 0.68, 1);
+  --e-reveal: cubic-bezier(0.18, 0.85, 0.26, 1);
+  --t-fast: 0.18s ease;
+  --rise: 12px;
+
+  --font: "InterVar", "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+html { background: #000; color-scheme: dark; }
+body {
+  margin: 0;
+  background: transparent; /* html keeps #000; a body background would paint over the fixed SkyBackground layer */
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 450;
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 16;
+  font-feature-settings: "kern" 1, "calt" 1;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+h1, h2, h3, h4, .h-display {
+  font-weight: 545;
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+h3, h4 { font-variation-settings: "opsz" 22; }
+button, input, select, textarea { font: inherit; letter-spacing: inherit; }
+::selection { background: rgba(var(--violet-rgb) / 0.55); }
+* { scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.28) transparent; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- glass ---- */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  -webkit-backdrop-filter: var(--blur-sm);
+  backdrop-filter: var(--blur-sm);
+}
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r-panel);
+  -webkit-backdrop-filter: var(--blur-lg);
+  backdrop-filter: var(--blur-lg);
+}
+.pop {
+  background: rgba(18, 18, 20, 0.88);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r-panel);
+  -webkit-backdrop-filter: var(--blur-lg);
+  backdrop-filter: var(--blur-lg);
+  box-shadow: var(--shadow-pop);
+}
+
+/* ---- buttons (landing: radius 10, ghost = hairline border, solid = white) ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 36px; padding: 0 16px; border-radius: var(--r-btn); border: 0; line-height: 1;
+  font-size: 13px; font-weight: 500; font-variation-settings: "opsz" 15; letter-spacing: -0.025em;
+  white-space: nowrap; text-decoration: none; cursor: pointer;
+  transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast), opacity var(--t-fast);
+}
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+.btn-sm { height: 30px; padding: 0 12px; font-size: 12px; }
+.btn-ghost { background: transparent; color: #fff; border: 1px solid var(--hairline); }
+.btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-solid { background: #fff; color: #000; font-weight: 550; }
+.btn-solid:hover { background: #e9e9ea; }
+.btn-primary { background: #fff; color: #000; font-weight: 550; }
+.btn-primary:hover { background: #e9e9ea; }
+
+/* ---- pills and chips (landing: "New" chip is white with black text) ---- */
+.pill, .chip {
+  display: inline-flex; align-items: center; gap: 6px; border-radius: var(--r-pill);
+  font-size: 12px; font-weight: 450; font-variation-settings: "opsz" 15; letter-spacing: -0.02em;
+  line-height: 1; padding: 6px 11px; color: var(--ink-dim);
+  background: var(--glass-bg); border: 1px solid var(--glass-line);
+  transition: background-color var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+}
+button.chip, a.chip { cursor: pointer; }
+button.chip:hover, a.chip:hover { background: rgba(255, 255, 255, 0.17); color: #fff; }
+.pill-chip { /* solid "New"-style chip used for outcome badges */
+  display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-pill);
+  padding: 4px 10px; font-size: 11.5px; font-weight: 600; font-variation-settings: "opsz" 14; letter-spacing: -0.01em; line-height: 1.2;
+}
+.tag-label { /* evidence labels / small status pills */
+  display: inline-flex; align-items: center; gap: 6px; border-radius: var(--r-pill); border: 1px solid var(--glass-line);
+  background: var(--glass-bg); padding: 4px 10px; font-size: 11.5px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; color: #fff;
+}
+
+/* ---- forms ---- */
+.input {
+  width: 100%; height: 40px; border-radius: var(--r-btn); padding: 0 12px;
+  background: var(--glass-bg); border: 1px solid var(--glass-line); color: #fff;
+  -webkit-backdrop-filter: var(--blur-sm); backdrop-filter: var(--blur-sm);
+  font-size: 14px; font-variation-settings: "opsz" 16;
+  transition: border-color var(--t-fast), background-color var(--t-fast);
+}
+.input::placeholder { color: var(--ink-mute); }
+.input:hover { border-color: rgba(255, 255, 255, 0.3); }
+.input option { background: #0e0e12; color: #fff; }
+textarea.input { height: auto; padding: 10px 12px; }
+
+.eyebrow {
+  font-size: 11.5px; font-weight: 500; font-variation-settings: "opsz" 14;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-mute);
+}
+.card { /* legacy alias: dense glass panel */
+  background: var(--panel-bg); border: 1px solid var(--glass-line); border-radius: var(--r-panel);
+  -webkit-backdrop-filter: var(--blur-lg); backdrop-filter: var(--blur-lg);
+}
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---- motion: subtle rise + fade, staggered, once per page load ---- */
+@keyframes fi-rise { from { opacity: 0; transform: translate3d(0, var(--rise), 0); } to { opacity: 1; transform: none; } }
+@keyframes fi-slide { from { opacity: 0; transform: translate3d(24px, 0, 0); } to { opacity: 1; transform: none; } }
+@keyframes fi-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.rise { animation: fi-rise 0.6s var(--e-soft) both; }
+.slide-in { animation: fi-slide 0.3s var(--e-nav) both; }
+.page-enter > * > * { animation: fi-rise 0.6s var(--e-soft) both; }
+.page-enter > * > *:nth-child(2) { animation-delay: 70ms; }
+.page-enter > * > *:nth-child(3) { animation-delay: 140ms; }
+.page-enter > * > *:nth-child(4) { animation-delay: 210ms; }
+.page-enter > * > *:nth-child(5) { animation-delay: 280ms; }
+.page-enter > * > *:nth-child(n + 6) { animation-delay: 350ms; }
+.skeleton {
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 25%, rgba(255, 255, 255, 0.16) 50%, rgba(255, 255, 255, 0.06) 75%);
+  background-size: 200% 100%; animation: fi-shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  html, body { background: #fff !important; color: #000 !important; }
+  .no-print { display: none !important; }
+}

@@ -1,0 +1,98 @@
+{
+ "PSI-10": {
+  "acronym": "ACME/Flame Design",
+  "title": "Advanced Combustion via Microgravity Experiments / Flame Design"
+ },
+ "PSI-20": {
+  "acronym": "ACME BRE",
+  "title": "Advanced Combustion via Microgravity Experiments - Burning Rate Emulator"
+ },
+ "PSI-21": {
+  "acronym": "ACME CLD Flame",
+  "title": "Advanced Combustion via Microgravity Experiments / Coflow Laminar Diffusion Flame"
+ },
+ "PSI-22": {
+  "acronym": "ACME E-FIELD Flames",
+  "title": "Advanced Combustion via Microgravity Experiments Electric-Field Effects on Laminar Diffusion Flames"
+ },
+ "PSI-23": {
+  "acronym": "ACME s-Flame",
+  "title": "Advanced Combustion via Microgravity Experiments-Structure and Response of Spherical Diffusion Flames"
+ },
+ "PSI-25": {
+  "acronym": "BASS-II",
+  "title": "Burning and Suppression of Solids - II"
+ },
+ "PSI-26": {
+  "acronym": "BASS",
+  "title": "Burning and Suppression of Solids"
+ },
+ "PSI-39": {
+  "acronym": "CFI",
+  "title": "Cool Flames Investigation"
+ },
+ "PSI-47": {
+  "acronym": "DAFT / DAFT-2",
+  "title": "Dust and Aerosol Measurement Feasibility Test / Dust and Aerosol Measurement Feasibility Test-2"
+ },
+ "PSI-60": {
+  "acronym": "",
+  "title": "Computational and Experimental Analysis of SPICE Data Sets"
+ },
+ "PSI-62": {
+  "acronym": "",
+  "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography"
+ },
+ "PSI-68": {
+  "acronym": "FLEX-2",
+  "title": "Flame Extinguishment Experiment - 2"
+ },
+ "PSI-69": {
+  "acronym": "FLEX",
+  "title": "Flame Extinguishment Experiment"
+ },
+ "PSI-98": {
+  "acronym": "SAFFIRE-I",
+  "title": "Spacecraft Fire Safety Experiment-I"
+ },
+ "PSI-99": {
+  "acronym": "SAFFIRE-II",
+  "title": "Spacecraft Fire Experiment-II"
+ },
+ "PSI-100": {
+  "acronym": "SAFFIRE-III",
+  "title": "Spacecraft Fire Experiment-III"
+ },
+ "PSI-101": {
+  "acronym": "SAME-R",
+  "title": "Smoke Aerosol Measurement Experiment-Reflight"
+ },
+ "PSI-102": {
+  "acronym": "SAME",
+  "title": "Smoke and Aerosol Measurement Experiment"
+ },
+ "PSI-106": {
+  "acronym": "SLICE",
+  "title": "Structure and Liftoff In Combustion Experiment"
+ },
+ "PSI-107": {
+  "acronym": "SPICE",
+  "title": "Smoke Point In Co-flow Experiment"
+ },
+ "PSI-115": {
+  "acronym": "",
+  "title": "Utilization of the Smoke Aerosol Measurement Experiment Data for Advanced Modeling and Simulation of Smoke Generation in Micro-Gravity"
+ },
+ "PSI-117": {
+  "acronym": "",
+  "title": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis"
+ },
+ "PSI-142": {
+  "acronym": "",
+  "title": "Quantitative Studies of Cool Flame Transitions at Radiation / Stretch Extinction Using Counterflow Flames"
+ },
+ "PSI-159": {
+  "acronym": "ACME CFI-G",
+  "title": "Advanced Combustion via Microgravity Experiments / Cool Flames Investigation with Gases"
+ }
+}

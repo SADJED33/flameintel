@@ -1,0 +1,12 @@
+timestamp,mode,label,n_questions,recall@8,MRR,refusal_accuracy,answered_rate,warnings_per_answered,errors,partial_rate,retrieve_s,status
+2026-11-15T04:05:30,retrieval,baseline,45,0.938,0.870,,,,0,,,complete
+2026-11-15T04:21:47,full,baseline,45,0.938,0.870,0.800,0.556,0.000,0,,,complete
+2026-11-15T04:41:43,retrieval,tablesum-only,45,0.938,0.870,,,,0,,,complete
+2026-11-15T04:41:58,retrieval,routing-v1,45,0.938,0.870,,,,0,,,complete
+2026-11-15T05:28:55,full,gen-v1,45,1.000,0.833,0.889,0.222,2.500,36,0.000,,invalid-quota
+2026-11-15T05:31:23,retrieval,baseline2,51,0.947,0.871,,,,0,,0.03,complete
+2026-11-15T05:40:44,retrieval,rerank-minilm,51,1.000,0.883,,,,0,,10.52,complete
+2026-11-15T06:29:51,full,gen-v1b (core20),20,0.857,0.786,0.900,0.700,0.000,0,0.300,,complete
+2026-11-15T07:40:05,full,gen-v2-gemini35 (core20),7,1.000,1.000,0.857,0.571,0.000,0,0.143,,partial-quota
+2026-11-15T10:16:54,retrieval,m1-api-check,51,0.947,0.871,,,,0,,0.01,complete
+2026-11-15T10:38:41,retrieval,m6-final-check,51,0.947,0.871,,,,0,,0.01,complete

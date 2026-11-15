@@ -1,0 +1,35 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# large local data (rebuild with the build scripts / download_kb.py)
+raw/
+kb_index/
+data/kb_index/
+_archive/
+llm_cache.jsonl
+data/llm_cache.jsonl
+*.tar
+*.part
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# generated caches
+api/data/cache/
+
+# dashboard
+dashboard/node_modules/
+dashboard/.next/
+dashboard/.env.local
+dashboard/npm.log
+dashboard/*.tsbuildinfo
+dashboard/next-env.d.ts
+
+# editor / os
+.vscode/
+.DS_Store
+Thumbs.db

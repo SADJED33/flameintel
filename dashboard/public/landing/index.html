@@ -1,0 +1,666 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FlameIntel - Understand fire in microgravity</title>
+<meta name="description" content="Search and question NASA's microgravity combustion experiments. Every answer is cited, and missing data is never guessed.">
+<link rel="icon" href="data:,">
+<link rel="preload" href="/landing/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+(function(){
+  var h=document.documentElement;
+  h.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  h.classList.add('intro');
+  setTimeout(function(){h.classList.remove('intro');h.classList.remove('intro-play');},5000);
+})();
+</script>
+<style>
+@font-face{ font-family:"InterVar"; font-style:normal; font-weight:100 900; font-display:block; src:url(/landing/assets/fonts/inter-var.woff2) format("woff2"); }
+
+:root{
+  --u: max( min(calc(100vw / 1563), calc(100vh / 460)), 0.80px );
+  --ink:#ffffff; --ink-mark:rgba(255,255,255,.98); --ink-nav:rgba(255,255,255,.91);
+  --ink-sub:rgba(255,255,255,.50); --ink-pill:rgba(255,255,255,.88); --ink-dark:#000000;
+  --hairline:rgba(255,255,255,.98); --glass-bg:rgba(255,255,255,.12); --glass-line:rgba(255,255,255,.15);
+  --r-btn: calc(10 * var(--u));
+}
+@supports (height:100dvh){ :root{ --u: max( min(calc(100vw / 1563), calc(100dvh / 460)), 0.80px ); } }
+@supports not (width: max(1px,1vw)){ :root{ --u: calc(100vw / 1563); } }
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{min-height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:#000; color:#fff; overflow-x:hidden;
+  font-family:"InterVar","Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+  font-optical-sizing:none; font-feature-settings:"kern" 1,"calt" 1;
+  -webkit-font-smoothing:antialiased; text-rendering:geometricPrecision;
+}
+a:focus-visible, button:focus-visible{ outline:2px solid #9b8cff; outline-offset:3px; border-radius:4px }
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* layers */
+.bg{position:fixed; inset:0; overflow:hidden; background:#000; isolation:isolate; z-index:0; pointer-events:none}
+.hero-block{position:relative; z-index:2; height:100vh; height:100dvh; overflow:hidden}
+.sky{
+  position:absolute; top:calc(-1.5 * var(--u)); left:50%; transform:translateX(-50%);
+  width:100%; height:auto; min-height:calc(100% + 1.5 * var(--u));
+  object-fit:cover; object-position:center top; z-index:0; pointer-events:none; user-select:none;
+}
+.veil{position:absolute; inset:0; background:rgba(0,0,0,.06); z-index:1; pointer-events:none}
+.veil-scroll{position:absolute; inset:0; background:#000; opacity:0; z-index:1; pointer-events:none; will-change:opacity}
+.screen{
+  position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:calc(1563 * var(--u)); height:calc(1006 * var(--u)); z-index:2;
+}
+.hero{position:absolute; left:calc(0.9 * var(--u)); right:calc(-0.9 * var(--u)); top:0; text-align:center}
+
+/* buttons (shared) */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:var(--r-btn); text-decoration:none; white-space:nowrap; line-height:1; border:0;
+  transition:background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+.ghost{background:transparent; color:#fff; border:calc(1 * var(--u)) solid rgba(255,255,255,.98)}
+.ghost:hover{background:rgba(255,255,255,.10)}
+.solid{background:#fff; color:#000}
+.solid:hover{background:#e9e9ea}
+
+/* header */
+.bar{
+  position:fixed; left:calc(50% - 495.5 * var(--u)); top:calc(7.5 * var(--u));
+  width:calc(983.5 * var(--u)); height:calc(36.2 * var(--u)); z-index:5;
+}
+.barglass{
+  position:fixed; left:0; right:0; top:0; height:calc(51.2 * var(--u)); z-index:4; pointer-events:none;
+  background:rgba(255,255,255,.08); border-bottom:calc(1 * var(--u)) solid rgba(255,255,255,.15);
+  -webkit-backdrop-filter:blur(calc(14 * var(--u))) saturate(140%); backdrop-filter:blur(calc(14 * var(--u))) saturate(140%);
+  opacity:0; transition:opacity .25s ease;
+}
+.barglass.on{opacity:1}
+.brand{
+  position:absolute; left:0; top:50%; transform:translateY(-50%);
+  display:flex; align-items:center; gap:calc(11.4 * var(--u)); color:var(--ink-mark); text-decoration:none;
+}
+.brand svg{width:calc(26.9 * var(--u)); height:calc(16.6 * var(--u)); overflow:visible; display:block}
+.brand span{
+  font-size:calc(17.5 * var(--u)); font-weight:550; font-variation-settings:'opsz' 22;
+  letter-spacing:0; line-height:1;
+}
+.links{
+  position:absolute; left:calc(353.8 * var(--u)); top:50%; transform:translateY(-50%);
+  display:flex; gap:calc(25.2 * var(--u));
+}
+.links a{
+  font-size:calc(11.9 * var(--u)); font-weight:450; font-variation-settings:'opsz' 15;
+  letter-spacing:calc(-0.30 * var(--u)); color:var(--ink-nav); white-space:nowrap; text-decoration:none;
+  transition:color .18s ease;
+}
+.links a:hover{color:#fff}
+.actions{position:absolute; right:0; top:0; display:flex; gap:calc(7.8 * var(--u))}
+.bar .btn{
+  height:calc(36.2 * var(--u)); line-height:calc(36.2 * var(--u));
+  font-size:calc(11.9 * var(--u)); font-weight:500; font-variation-settings:'opsz' 15;
+  letter-spacing:calc(-0.38 * var(--u));
+}
+.bar .ghost{width:calc(85.5 * var(--u))}
+.bar .solid{
+  width:calc(88.2 * var(--u)); font-size:calc(12.15 * var(--u)); font-weight:550;
+  letter-spacing:calc(-0.35 * var(--u));
+}
+.menu{
+  display:none; width:calc(36.2 * var(--u)); height:calc(36.2 * var(--u)); border-radius:var(--r-btn);
+  border:calc(1 * var(--u)) solid rgba(255,255,255,.35); background:transparent; color:#fff;
+  cursor:pointer; padding:0; align-items:center; justify-content:center;
+}
+.menu svg{width:55%; height:55%}
+.menu:hover{background:rgba(255,255,255,.10)}
+.sheet{
+  display:none; position:absolute; top:calc(100% + 9 * var(--u)); right:0; min-width:calc(210 * var(--u));
+  padding:calc(10 * var(--u)); border-radius:calc(14 * var(--u));
+  background:rgba(18,18,20,.88); border:calc(1 * var(--u)) solid rgba(255,255,255,.15);
+  -webkit-backdrop-filter:blur(calc(18 * var(--u))) saturate(140%); backdrop-filter:blur(calc(18 * var(--u))) saturate(140%);
+  box-shadow:0 calc(18 * var(--u)) calc(44 * var(--u)) rgba(0,0,0,.55);
+}
+.bar[data-open="true"] .sheet{display:block}
+.sheet a{
+  display:block; padding:calc(9 * var(--u)) calc(10 * var(--u)); border-radius:calc(9 * var(--u));
+  color:var(--ink-nav); font-size:calc(14 * var(--u)); font-weight:450; font-variation-settings:'opsz' 15;
+  letter-spacing:calc(-0.30 * var(--u)); text-decoration:none;
+}
+.sheet a:hover{background:rgba(255,255,255,.08); color:#fff}
+.sheet .btn.solid{
+  display:flex; width:100%; height:calc(38 * var(--u)); margin-top:calc(8 * var(--u));
+  font-size:calc(14 * var(--u)); font-weight:500; font-variation-settings:'opsz' 15;
+  letter-spacing:calc(-0.30 * var(--u)); color:#000; line-height:1; padding:0;
+}
+.sheet .btn.solid:hover{background:#e9e9ea; color:#000}
+
+/* hero */
+.pill{
+  position:absolute; top:calc(129.6 * var(--u)); left:50%; transform:translateX(-50%);
+  display:inline-flex; align-items:center;
+  width:calc(194.5 * var(--u)); height:calc(22.4 * var(--u));
+  padding-left:calc(4.0 * var(--u)); padding-right:calc(8.6 * var(--u));
+  border-radius:999px; background:rgba(255,255,255,.12); border:calc(1 * var(--u)) solid rgba(255,255,255,.15);
+  -webkit-backdrop-filter:blur(calc(10 * var(--u))); backdrop-filter:blur(calc(10 * var(--u)));
+  white-space:nowrap; text-decoration:none; color:#fff; transition:background-color .18s ease;
+}
+.pill:hover{background:rgba(255,255,255,.17)}
+.chip{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:calc(33.3 * var(--u)); height:calc(14 * var(--u)); border-radius:999px;
+  background:#fff; color:#000; font-size:calc(10.2 * var(--u)); font-weight:600; font-variation-settings:'opsz' 14;
+  padding-top:calc(1.7 * var(--u)); letter-spacing:calc(-0.1 * var(--u)); line-height:1;
+}
+.pill-label{
+  margin-left:calc(3.4 * var(--u)); position:relative; top:calc(1 * var(--u));
+  color:rgba(255,255,255,.88); font-size:calc(12.4 * var(--u)); font-weight:450; font-variation-settings:'opsz' 15;
+  letter-spacing:calc(-0.48 * var(--u)); height:calc(22.4 * var(--u)); line-height:calc(22.4 * var(--u));
+}
+.pill svg{
+  width:calc(9.5 * var(--u)); height:calc(8 * var(--u)); margin-left:auto; color:rgba(255,255,255,.95); flex:none;
+}
+h1{
+  position:absolute; left:calc(0.6 * var(--u)); right:calc(-0.6 * var(--u)); top:calc(168.5 * var(--u)); margin:0;
+  font-size:calc(55 * var(--u)); font-weight:545; font-variation-settings:'opsz' 32;
+  line-height:calc(56 * var(--u)); letter-spacing:calc(-0.76 * var(--u)); color:#fff;
+}
+.ln{display:block; overflow:hidden; padding-bottom:calc(7 * var(--u)); margin-bottom:calc(-7 * var(--u))}
+.ln-i{display:block}
+.hero p{
+  position:absolute; left:50%; transform:translateX(calc(-50% + 0.25 * var(--u))); top:calc(292.6 * var(--u)); margin:0;
+  width:calc(700 * var(--u));
+  font-size:calc(15.7 * var(--u)); font-weight:400; font-variation-settings:'opsz' 20;
+  line-height:calc(24 * var(--u)); letter-spacing:calc(-0.05 * var(--u)); color:rgba(255,255,255,.50);
+}
+.cta{
+  position:absolute; left:50%; transform:translateX(-50%); top:calc(342.8 * var(--u));
+  display:flex; gap:calc(9.9 * var(--u));
+}
+.cta .btn{
+  height:calc(36.4 * var(--u)); line-height:calc(36.4 * var(--u)); padding-top:calc(2 * var(--u));
+  font-size:calc(13.3 * var(--u)); font-weight:480; font-variation-settings:'opsz' 16;
+  letter-spacing:calc(-0.34 * var(--u));
+}
+.cta .ghost{width:calc(99.6 * var(--u))}
+.cta .solid{width:calc(96.4 * var(--u))}
+
+/* responsive */
+@media (max-width:1023px){
+  :root{--u:calc(100vw / 900)}
+  .bar{left:4.2vw; width:91.6vw}
+  .links, .actions > .solid{display:none}
+  .menu{display:inline-flex}
+}
+@media (max-width:640px){
+  :root{--u:calc(100vw / 486)}
+  .bar{left:5.2vw; width:89.6vw}
+  .hero p{width:min(calc(560 * var(--u)), 88vw); line-height:calc(23 * var(--u))}
+  .pill{padding-right:calc(8 * var(--u))}
+}
+@media (max-width:380px){
+  :root{--u:calc(100vw / 470)}
+}
+@media (max-width:1023px) and (max-height:520px){
+  :root{--u:min(calc(100vw / 900), calc(100vh / 470))}
+}
+@media (min-aspect-ratio:3/1){
+  .sky{top:auto; bottom:0; height:auto; min-height:0; width:100%; min-width:100%}
+  .veil{background:linear-gradient(to bottom, rgba(0,0,0,.82) 0%, rgba(0,0,0,.72) 55%, rgba(0,0,0,.18) 100%)}
+}
+
+/* entrance animation (plays once, then the classes are removed) */
+@media (prefers-reduced-motion:no-preference){
+  :root{
+    --e-reveal:cubic-bezier(.18,.85,.26,1);
+    --e-soft:cubic-bezier(.22,1,.36,1);
+    --e-nav:cubic-bezier(.33,1,.68,1);
+    --rise:calc(10 * var(--u));
+    --rise-lg:calc(13 * var(--u));
+  }
+  .intro .brand, .intro .links a, .intro .actions > .btn, .intro .actions > .menu,
+  .intro .pill, .intro .hero p, .intro .cta .btn{opacity:0}
+  .intro .ln-i{transform:translate3d(0,115%,0)}
+  .intro .brand, .intro .pill, .intro .hero p, .intro .ln-i, .intro .cta .btn{will-change:transform,opacity}
+
+  @keyframes i-rise{from{opacity:0; transform:translate3d(0,var(--rise),0)} to{opacity:1; transform:none}}
+  @keyframes i-rise-cy{from{opacity:0; transform:translateY(-50%) translate3d(0,var(--rise),0)} to{opacity:1; transform:translateY(-50%)}}
+  @keyframes i-pill{
+    from{opacity:0; transform:translateX(-50%) translate3d(0,var(--rise-lg),0) scale(.972)}
+    to{opacity:1; transform:translateX(-50%)}
+  }
+  @keyframes i-sub{
+    from{opacity:0; transform:translateX(calc(-50% + 0.25 * var(--u))) translate3d(0,var(--rise-lg),0)}
+    to{opacity:1; transform:translateX(calc(-50% + 0.25 * var(--u)))}
+  }
+  @keyframes i-btn{from{opacity:0; transform:translate3d(0,var(--rise-lg),0) scale(.986)} to{opacity:1; transform:none}}
+  @keyframes i-line{from{transform:translate3d(0,115%,0)} to{transform:none}}
+
+  .intro-play .brand{animation:i-rise-cy .62s var(--e-nav) 0s both}
+  .intro-play .links a:nth-child(1){animation:i-rise .55s var(--e-nav) .070s both}
+  .intro-play .links a:nth-child(2){animation:i-rise .55s var(--e-nav) .115s both}
+  .intro-play .links a:nth-child(3){animation:i-rise .55s var(--e-nav) .160s both}
+  .intro-play .links a:nth-child(4){animation:i-rise .55s var(--e-nav) .205s both}
+  .intro-play .links a:nth-child(5){animation:i-rise .55s var(--e-nav) .250s both}
+  .intro-play .actions > .btn, .intro-play .actions > .menu{animation:i-rise .55s var(--e-nav) .215s both}
+  .intro-play .actions > .ghost{animation:i-rise .55s var(--e-nav) .160s both}
+  .intro-play .pill{animation:i-pill .62s var(--e-soft) .26s both}
+  .intro-play .ln:nth-child(1) .ln-i{animation:i-line .95s var(--e-reveal) .34s both}
+  .intro-play .ln:nth-child(2) .ln-i{animation:i-line .95s var(--e-reveal) .48s both}
+  .intro-play .hero p{animation:i-sub .70s var(--e-soft) .86s both}
+  .intro-play .cta .btn:nth-child(1){animation:i-btn .62s var(--e-soft) 1.00s both}
+  .intro-play .cta .btn:nth-child(2){animation:i-btn .62s var(--e-soft) 1.07s both}
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important} }
+
+/* ================= sections below the hero (normal responsive layout, not the --u scaling) ================= */
+main.site{position:relative; z-index:2}
+.s-wrap{max-width:1180px; margin:0 auto; padding:0 24px}
+.s-sec{padding:112px 0 0; scroll-margin-top:84px}
+.s-sec:last-of-type{padding-bottom:40px}
+.s-glass{
+  background:var(--glass-bg); border:1px solid var(--glass-line); border-radius:14px;
+  -webkit-backdrop-filter:blur(14px) saturate(140%); backdrop-filter:blur(14px) saturate(140%);
+}
+.s-eyebrow{
+  display:inline-flex; align-items:center; height:26px; padding:0 13px; border-radius:999px;
+  background:var(--glass-bg); border:1px solid var(--glass-line);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  color:rgba(255,255,255,.88); font-size:12.4px; font-weight:450; font-variation-settings:'opsz' 15; letter-spacing:-0.02em;
+}
+.s-h2{
+  margin:18px 0 0; max-width:760px; color:#fff; font-size:clamp(30px,4.2vw,50px); font-weight:545;
+  font-variation-settings:'opsz' 32; line-height:1.08; letter-spacing:-0.025em;
+}
+.s-h3{margin:0; color:#fff; font-size:17px; font-weight:545; font-variation-settings:'opsz' 22; letter-spacing:-0.02em; line-height:1.25}
+.s-p{
+  margin:0; color:rgba(255,255,255,.80); font-size:17px; font-weight:400; font-variation-settings:'opsz' 20;
+  line-height:1.6; letter-spacing:-0.01em;
+}
+.s-sm{margin:0; color:rgba(255,255,255,.74); font-size:14px; line-height:1.55; font-variation-settings:'opsz' 15; letter-spacing:-0.005em}
+.s-lead{margin:18px 0 0; max-width:640px}
+
+/* about */
+.s-two{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:36px}
+.s-callout{margin-top:32px; padding:26px 30px}
+.s-callout .s-p{color:#fff; font-size:clamp(18px,2.1vw,24px); font-weight:480; font-variation-settings:'opsz' 22; line-height:1.4; letter-spacing:-0.02em}
+
+/* how it works */
+.s-steps{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin:40px 0 0; padding:0; list-style:none}
+.s-step{padding:22px 20px 24px; display:flex; flex-direction:column; gap:10px}
+.s-num{
+  display:inline-flex; align-items:center; justify-content:center; width:28px; height:20px; border-radius:999px;
+  background:#fff; color:#000; font-size:11.5px; font-weight:600; font-variation-settings:'opsz' 14; letter-spacing:-0.1px; line-height:1;
+}
+
+/* data */
+.s-stats{display:grid; grid-template-columns:repeat(4,1fr); margin-top:40px}
+.s-stat{padding:28px 26px; border-left:1px solid var(--glass-line)}
+.s-stat:first-child{border-left:0}
+.s-big{display:block; color:#fff; font-size:clamp(38px,4.6vw,58px); font-weight:545; font-variation-settings:'opsz' 32; letter-spacing:-0.035em; line-height:1; font-variant-numeric:tabular-nums}
+.s-stat .s-sm{margin-top:10px}
+.s-tags{display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0; padding:0; list-style:none}
+.s-tag{
+  display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px;
+  background:var(--glass-bg); border:1px solid var(--glass-line); color:rgba(255,255,255,.88);
+  font-size:13px; font-weight:450; font-variation-settings:'opsz' 15; letter-spacing:-0.02em;
+}
+.s-note{margin-top:14px}
+.s-sub{margin:72px 0 0; color:#fff; font-size:clamp(22px,2.6vw,30px); font-weight:545; font-variation-settings:'opsz' 32; letter-spacing:-0.025em; line-height:1.15}
+.s-trust{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:28px 0 0; padding:0; list-style:none}
+.s-card{padding:24px 22px; display:flex; flex-direction:column; gap:10px}
+.s-mark{width:22px; height:22px; color:#fff}
+
+/* demo */
+.s-demo{margin-top:36px; padding:30px}
+.s-chips{display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin:0; padding:0; list-style:none}
+.s-chips li{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
+.s-q{
+  display:inline-flex; align-items:center; gap:10px; min-height:42px; padding:9px 18px; border-radius:999px;
+  background:var(--glass-bg); border:1px solid var(--glass-line); color:#fff; text-decoration:none;
+  font-size:15px; font-weight:450; font-variation-settings:'opsz' 16; letter-spacing:-0.02em; line-height:1.3;
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  transition:background-color .18s ease, border-color .18s ease;
+}
+.s-q:hover{background:rgba(255,255,255,.17); border-color:rgba(255,255,255,.35)}
+.s-q svg{width:10px; height:9px; flex:none; opacity:.9}
+.s-flag{
+  display:inline-flex; align-items:center; height:22px; padding:0 10px; border-radius:999px; background:#fff; color:#000;
+  font-size:11.5px; font-weight:600; font-variation-settings:'opsz' 14; letter-spacing:-0.1px; white-space:nowrap;
+}
+
+/* limits */
+.s-limits{margin-top:36px; padding:30px 32px}
+.s-list{margin:18px 0 0; padding:0; list-style:none; display:grid; gap:14px}
+.s-list li{display:flex; gap:12px; color:rgba(255,255,255,.82); font-size:16px; line-height:1.55; font-variation-settings:'opsz' 18; letter-spacing:-0.01em}
+.s-list li::before{content:""; flex:none; width:6px; height:6px; margin-top:.68em; border-radius:50%; background:#fff; opacity:.85}
+.s-list b{color:#fff; font-weight:550}
+
+/* footer */
+.s-foot{margin-top:112px; border-top:1px solid var(--glass-line); background:rgba(0,0,0,.55); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px)}
+.s-foot-in{max-width:1180px; margin:0 auto; padding:40px 24px 48px; display:grid; grid-template-columns:1.3fr 1fr; gap:36px}
+.s-brand{display:inline-flex; align-items:center; gap:11px; color:rgba(255,255,255,.98); text-decoration:none}
+.s-brand svg{width:27px; height:16.6px; overflow:visible; display:block}
+.s-brand span{font-size:17.5px; font-weight:550; font-variation-settings:'opsz' 22; line-height:1}
+.s-foot nav{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
+.s-foot nav a{
+  display:inline-flex; align-items:center; justify-content:center; height:36px; padding:0 16px; border-radius:var(--r-btn);
+  border:1px solid rgba(255,255,255,.98); color:#fff; text-decoration:none; font-size:13px; font-weight:500; font-variation-settings:'opsz' 15; letter-spacing:-0.025em;
+  transition:background-color .18s ease;
+}
+.s-foot nav a:hover{background:rgba(255,255,255,.10)}
+.s-foot nav a.solid{background:#fff; color:#000; border-color:#fff; font-weight:550}
+.s-foot nav a.solid:hover{background:#e9e9ea}
+.s-team h3{margin:0 0 4px}
+.s-slots{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin:14px 0 0; padding:0; list-style:none}
+.s-slot{
+  min-height:44px; padding:10px 14px; border-radius:10px; border:1px dashed rgba(255,255,255,.35);
+  color:rgba(255,255,255,.72); font-size:13px; font-variation-settings:'opsz' 15; letter-spacing:-0.01em; display:flex; align-items:center;
+}
+.s-tiny{margin-top:28px; font-size:12.5px; color:rgba(255,255,255,.72); line-height:1.5}
+
+/* reveal once on scroll: fade + 13px rise, .62s, 70ms stagger (only when JS runs) */
+.js .rv{opacity:0; transform:translate3d(0,13px,0); transition:opacity .62s var(--e-soft,cubic-bezier(.22,1,.36,1)) calc(var(--i,0) * 70ms), transform .62s var(--e-soft,cubic-bezier(.22,1,.36,1)) calc(var(--i,0) * 70ms)}
+.js .rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .js .rv{opacity:1!important; transform:none!important} }
+@media (prefers-reduced-motion:no-preference){ :root{--e-soft:cubic-bezier(.22,1,.36,1)} }
+
+@media (max-width:1023px){
+  .s-sec{padding-top:88px}
+  .s-steps{grid-template-columns:repeat(2,1fr)}
+  .s-trust{grid-template-columns:repeat(2,1fr)}
+  .s-stats{grid-template-columns:repeat(2,1fr)}
+  .s-stat:nth-child(3){border-left:0}
+  .s-stat:nth-child(n+3){border-top:1px solid var(--glass-line)}
+  .s-foot-in{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .s-wrap{padding:0 18px}
+  .s-sec{padding-top:72px}
+  .s-two{grid-template-columns:1fr; gap:18px}
+  .s-steps,.s-trust{grid-template-columns:1fr}
+  .s-callout,.s-demo,.s-limits{padding:22px 20px}
+  .s-p{font-size:16px}
+  .s-stat{padding:22px 18px}
+  .s-slots{grid-template-columns:1fr}
+  .s-foot{margin-top:80px}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <video class="sky" aria-hidden="true" autoplay muted loop playsinline preload="auto" poster="/landing/assets/sky.webp" src="/landing/assets/sky.mp4"></video>
+  <div class="veil"></div>
+  <div class="veil-scroll" id="veil-scroll"></div>
+</div>
+<div class="barglass" id="barglass" aria-hidden="true"></div>
+
+  <header class="bar" data-open="false">
+    <a class="brand" href="/" aria-label="FlameIntel â€” home">
+      <svg viewBox="0 0 26.9 16.6" fill="none" aria-hidden="true">
+        <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="currentColor" stroke-width="1.25"/>
+        <circle cx="13.25" cy="8.4" r="8.8" fill="#000"/>
+        <circle cx="13.25" cy="8.4" r="8.1" fill="currentColor"/>
+        <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="#000" stroke-width="0.9" stroke-dasharray="28.2 28.2"/>
+        <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="currentColor" stroke-width="1.25" stroke-dasharray="28.2 28.2"/>
+      </svg>
+      <span>FlameIntel</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="#data">Data</a>
+      <a href="#demo-q">Demo</a>
+      <a href="#limits">Limits</a>
+    </nav>
+    <div class="actions">
+      <a class="btn ghost" href="/about-data">Data notes</a>
+      <a class="btn solid" href="/dashboard">Dashboard</a>
+      <button class="menu" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-sheet">
+        <svg viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="sheet" id="menu-sheet" aria-label="Menu">
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="#data">Data</a>
+      <a href="#demo-q">Demo</a>
+      <a href="#limits">Limits</a>
+      <a class="btn solid" href="/dashboard">Dashboard</a>
+    </nav>
+  </header>
+
+<div class="hero-block">
+  <div class="screen">
+    <main class="hero">
+      <a class="pill" href="/dashboard/assistant">
+        <span class="chip">New</span>
+        <span class="pill-label">NASA PSI, fully cited</span>
+        <svg viewBox="0 0 9.5 8" fill="none" aria-hidden="true"><path d="M0.7 4H8.8M5.6 0.75 8.85 4 5.6 7.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <h1><span class="ln"><span class="ln-i">Understand fire</span></span><span class="ln"><span class="ln-i">in microgravity</span></span></h1>
+      <p>Ask NASA's combustion experiments anything. Every answer is cited.</p>
+      <div class="cta">
+        <a class="btn ghost" href="/dashboard/assistant">Ask the AI</a>
+        <a class="btn solid" href="#about">Explore</a>
+      </div>
+    </main>
+  </div>
+</div>
+
+<main class="site">
+
+  <section class="s-sec" id="about" aria-labelledby="about-h">
+    <div class="s-wrap">
+      <span class="s-eyebrow rv">About</span>
+      <h2 class="s-h2 rv" id="about-h" style="--i:1">Fire behaves differently in space</h2>
+      <div class="s-two">
+        <p class="s-p rv" style="--i:2">On Earth, hot gas rises and a flame pulls into a pointed cone. In microgravity there is no buoyancy, so flames burn as oval balls, and flame spread and smoke move in ways ground tests do not show.</p>
+        <p class="s-p rv" style="--i:3">On a mission far from Earth a fire can be catastrophic, so how materials burn and how smoke spreads in microgravity is central to spacecraft fire safety. NASA has studied it in combustion experiments aboard the ISS and the Cygnus spacecraft.</p>
+      </div>
+      <div class="s-glass s-callout rv" style="--i:4">
+        <p class="s-p">FlameIntel turns NASA PSI combustion research into a searchable, explainable, data-aware dashboard for future space habitats.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-sec" id="how" aria-labelledby="how-h">
+    <div class="s-wrap">
+      <span class="s-eyebrow rv">How it works</span>
+      <h2 class="s-h2 rv" id="how-h" style="--i:1">From NASA files to cited answers</h2>
+      <ol class="s-steps">
+        <li class="s-glass s-step rv" style="--i:2"><span class="s-num">1</span><h3 class="s-h3">Collect</h3><p class="s-sm">NASA PSI files for 24 experiments.</p></li>
+        <li class="s-glass s-step rv" style="--i:3"><span class="s-num">2</span><h3 class="s-h3">Read</h3><p class="s-sm">PDF text, Excel rows and table summaries.</p></li>
+        <li class="s-glass s-step rv" style="--i:4"><span class="s-num">3</span><h3 class="s-h3">Chunk</h3><p class="s-sm">13,112 searchable passages, each tagged with experiment, document and page.</p></li>
+        <li class="s-glass s-step rv" style="--i:5"><span class="s-num">4</span><h3 class="s-h3">Index</h3><p class="s-sm">Embeddings with BAAI/bge-small-en-v1.5, stored in ChromaDB.</p></li>
+        <li class="s-glass s-step rv" style="--i:6"><span class="s-num">5</span><h3 class="s-h3">Answer</h3><p class="s-sm">The 8 closest passages go to the AI, which answers only from them, with citations.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="s-sec" id="data" aria-labelledby="data-h">
+    <div class="s-wrap">
+      <span class="s-eyebrow rv">The data</span>
+      <h2 class="s-h2 rv" id="data-h" style="--i:1">What is inside, and how well it works</h2>
+      <div class="s-glass s-stats rv" style="--i:2">
+        <div class="s-stat"><span class="s-big">24</span><p class="s-sm">NASA PSI experiments</p></div>
+        <div class="s-stat"><span class="s-big">13,112</span><p class="s-sm">searchable chunks</p></div>
+        <div class="s-stat"><span class="s-big">51</span><p class="s-sm">test questions</p></div>
+        <div class="s-stat"><span class="s-big">95%</span><p class="s-sm">right experiment found in the top 8 (recall@8 0.947)</p></div>
+      </div>
+      <p class="s-sm s-note rv" style="--i:3">Measured with our own evaluation set, on the 38 of the 51 questions that name the expected experiment.</p>
+      <ul class="s-tags rv" style="--i:4" aria-label="Document types">
+        <li class="s-tag">Reports</li><li class="s-tag">Science Documents</li><li class="s-tag">Engineering Documents</li><li class="s-tag">Presentations</li>
+        <li class="s-tag">Reference Data</li><li class="s-tag">Raw Data</li><li class="s-tag">Metadata</li><li class="s-tag">Excel / table rows</li>
+      </ul>
+
+      <h3 class="s-sub rv">Built to be trusted</h3>
+      <ul class="s-trust">
+        <li class="s-glass s-card rv" style="--i:1">
+          <svg class="s-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+          <h3 class="s-h3">Every claim cited</h3><p class="s-sm">Each factual sentence ends with a source tag you can open: experiment, document and page.</p>
+        </li>
+        <li class="s-glass s-card rv" style="--i:2">
+          <svg class="s-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+          <h3 class="s-h3">Says &ldquo;Not in the data&rdquo;</h3><p class="s-sm">When the sources do not cover a question, the assistant says so instead of guessing.</p>
+        </li>
+        <li class="s-glass s-card rv" style="--i:3">
+          <svg class="s-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18l5-5 4 3 7-8"/><path d="M3 3l18 18"/></svg>
+          <h3 class="s-h3">No predictions</h3><p class="s-sm">No forecasts, safety probabilities or certifications. Only what the sources state.</p>
+        </li>
+        <li class="s-glass s-card rv" style="--i:4">
+          <svg class="s-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <h3 class="s-h3">Numbers checked in code</h3><p class="s-sm">A program compares every number in an answer with the cited passages and flags any it cannot find.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s-sec" id="demo-q" aria-labelledby="demo-h">
+    <div class="s-wrap">
+      <span class="s-eyebrow rv">Demo</span>
+      <h2 class="s-h2 rv" id="demo-h" style="--i:1">Ask it something</h2>
+      <div class="s-glass s-demo rv" style="--i:2">
+        <ul class="s-chips">
+          <li><a class="s-q" href="/dashboard/assistant?q=What%20do%20the%20data%20show%20about%20cotton%20fiberglass%20fabric%20flammability%3F">What do the data show about cotton fiberglass fabric flammability?<svg viewBox="0 0 9.5 8" fill="none" aria-hidden="true"><path d="M0.7 4H8.8M5.6 0.75 8.85 4 5.6 7.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a class="s-q" href="/dashboard/assistant?q=What%20channels%20did%20the%20SAFFIRE%20smoke%20detector%20record%3F">What channels did the SAFFIRE smoke detector record?<svg viewBox="0 0 9.5 8" fill="none" aria-hidden="true"><path d="M0.7 4H8.8M5.6 0.75 8.85 4 5.6 7.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a class="s-q" href="/dashboard/assistant?q=Would%20my%20cabin%20survive%20a%20fire%3F">Would my cabin survive a fire?<svg viewBox="0 0 9.5 8" fill="none" aria-hidden="true"><path d="M0.7 4H8.8M5.6 0.75 8.85 4 5.6 7.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="s-flag">Refused on purpose</span></li>
+        </ul>
+        <p class="s-sm" style="margin-top:20px">Each one opens the AI Research Assistant with the question filled in. The last one asks for a prediction, so the assistant declines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-sec" id="limits" aria-labelledby="limits-h">
+    <div class="s-wrap">
+      <span class="s-eyebrow rv">Limits</span>
+      <h2 class="s-h2 rv" id="limits-h" style="--i:1">What we do not claim</h2>
+      <div class="s-glass s-limits rv" style="--i:2">
+        <p class="s-p" style="color:#fff">FlameIntel organizes existing research. It does not predict, certify equipment or replace NASA sources. And the data has gaps:</p>
+        <ul class="s-list">
+          <li><span><b>237 files were skipped</b> when indexing: 159 raw lab sheets or plots and 78 PDFs with no extractable text. Their content is not searchable.</span></li>
+          <li><span><b>9 downloads failed</b>, so those documents are missing.</span></li>
+          <li><span><b>FLEX and PSI-20</b> keep most of their data in tables, so the text index describes them less deeply.</span></li>
+          <li><span><b>SAFFIRE-I, II and III</b> have very similar text. Check the experiment on every citation.</span></li>
+          <li><span><b>The free AI quota is limited</b>, so answers can be slow or switch to a backup model.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="s-foot">
+  <div class="s-foot-in">
+    <div>
+      <a class="s-brand" href="/" aria-label="FlameIntel — home">
+        <svg viewBox="0 0 26.9 16.6" fill="none" aria-hidden="true">
+          <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="currentColor" stroke-width="1.25"/>
+          <circle cx="13.25" cy="8.4" r="8.8" fill="#000"/>
+          <circle cx="13.25" cy="8.4" r="8.1" fill="currentColor"/>
+          <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="#000" stroke-width="0.9" stroke-dasharray="28.2 28.2"/>
+          <ellipse cx="13.25" cy="8.4" rx="13.2" ry="2.9" transform="rotate(-25 13.25 8.4)" stroke="currentColor" stroke-width="1.25" stroke-dasharray="28.2 28.2"/>
+        </svg>
+        <span>FlameIntel</span>
+      </a>
+      <p class="s-sm" style="margin-top:14px">Built for NASA Space Apps Challenge 2026 - Flame in Freefall</p>
+      <nav aria-label="Footer">
+        <a class="solid" href="/dashboard">Dashboard</a>
+        <a href="/about-data">Data notes</a>
+      </nav>
+      <p class="s-tiny">Data: NASA Physical Sciences Informatics. FlameIntel is an independent project and not a NASA product.</p>
+    </div>
+    <!-- TEAM PLACEHOLDER: replace each "Team member N" slot with a real name (and role). No names have been invented. -->
+    <div class="s-team">
+      <h3 class="s-h3">Team (5)</h3>
+      <p class="s-sm" style="margin-top:6px">Placeholder: add the five team member names here.</p>
+      <ul class="s-slots">
+        <li class="s-slot">Team member 1: [add name]</li>
+        <li class="s-slot">Team member 2: [add name]</li>
+        <li class="s-slot">Team member 3: [add name]</li>
+        <li class="s-slot">Team member 4: [add name]</li>
+        <li class="s-slot">Team member 5: [add name]</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.documentElement;
+  if(!h.classList.contains('intro'))return;
+  var started=false, last=document.querySelector('.cta .btn:last-child');
+  function done(){h.classList.remove('intro');h.classList.remove('intro-play');}
+  function start(){
+    if(started)return; started=true;
+    h.classList.add('intro-play');
+    if(last)last.addEventListener('animationend',function(e){ if(e.target===last)done(); });
+    setTimeout(done,3000);
+  }
+  function go(){ requestAnimationFrame(function(){ requestAnimationFrame(start); }); }
+  var t=setTimeout(go,700);
+  if(document.fonts&&document.fonts.ready){
+    Promise.all([document.fonts.load('545 55px InterVar'),document.fonts.ready]).then(function(){clearTimeout(t);go();},function(){});
+  }
+})();
+</script>
+<script>
+(function(){
+  var bar=document.querySelector('.bar'), btn=document.getElementById('menu-btn');
+  function set(open){
+    bar.dataset.open=open?'true':'false';
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close menu':'Menu');
+  }
+  set(false);
+  btn.addEventListener('click',function(e){ e.stopPropagation(); set(bar.dataset.open!=='true'); });
+  document.addEventListener('click',function(e){ if(!bar.contains(e.target))set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape')set(false); });
+  document.getElementById('menu-sheet').addEventListener('click',function(e){ if(e.target.closest('a'))set(false); });
+})();
+</script>
+<script>
+(function(){
+  var v=document.querySelector('video.sky'); v.muted=true;
+  function play(){ if(v.paused){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } }
+  play();
+  v.addEventListener('canplay',play);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden)play(); });
+  ['pointerdown','touchstart','scroll'].forEach(function(n){ window.addEventListener(n,play,{passive:true,once:true}); });
+})();
+</script>
+<script>
+(function(){
+  /* scroll: glass header after 40px, and the veil darkens from the spec's .06 to about .78 by the end of the hero */
+  var bar=document.querySelector('.bar'), glass=document.getElementById('barglass'), vs=document.getElementById('veil-scroll'),
+      hero=document.querySelector('.hero-block'), ticking=false;
+  function update(){
+    ticking=false;
+    var y=window.pageYOffset||document.documentElement.scrollTop||0, h=hero?hero.offsetHeight:window.innerHeight;
+    var on=y>40; bar.classList.toggle('scrolled',on); glass.classList.toggle('on',on);
+    vs.style.opacity=(0.766*Math.min(1,y/Math.max(1,h))).toFixed(3); /* 1-(1-.06)(1-.766) = .78 */
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
+<script>
+(function(){
+  /* reveal each section once as it scrolls into view */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    els.forEach(function(e){e.classList.add('in')}); return;
+  }
+  var io=new IntersectionObserver(function(list){
+    list.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
+

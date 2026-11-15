@@ -1,0 +1,1682 @@
+{
+ "generated_at": "2026-11-15T10:35:48",
+ "method": "Fixed questions run through the RAG assistant; only sentences with valid [S#] citations kept.",
+ "questions_run": 12,
+ "insights": [
+  {
+   "id": "ins-01",
+   "theme": "Suppression systems",
+   "topic": "suppression & extinguishment",
+   "question": "What do the experiments report about extinguishing or suppressing flames, and under which conditions?",
+   "title": "What do the experiments report about extinguishing or suppressing flames, and under which conditions",
+   "summary": "In the background of the PSI-39 CFI experiment, conventional understanding states that droplet flames can extinguish via diffusive extinction (at high oxygen levels and small droplet sizes) or radiative extinction (at low oxygen levels and large droplet sizes).",
+   "evidence_label": "source_reported",
+   "outcome": "partial",
+   "claims": [
+    {
+     "text": "In the background of the PSI-39 CFI experiment, conventional understanding states that droplet flames can extinguish via diffusive extinction (at high oxygen levels and small droplet sizes) or radiative extinction (at low oxygen levels and large droplet sizes).",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-39",
+       "acronym": "CFI",
+       "doc_type": "Presentations",
+       "file": "PSI-39_Presentations_Cool Flames in Space, a Hot Prospect on Earth_CFI.pdf",
+       "loc": "p.3",
+       "distance": 0.2151,
+       "excerpt": "[PSI-39 | CFI | Presentations | PSI-39_Presentations_Cool Flames in Space, a Hot Prospect on Earth_CFI] ISS FLEX Experiments - Background\n• Microgravity droplet combustion experiments aimed at\nunderstanding the flammability boundaries of liquid\nfuels in a variety of ambient conditions – spacecraft fire\nsafety\n• Sooting and non-sooting fuels are burned in nitrogen,\nhelium, carbon dioxide, and xenon environment at\nvarious oxygen concentrations at different pressures\n(effectiveness of fire suppress"
+      }
+     ]
+    },
+    {
+     "text": "The PSI-39 CFI background describes studying liquid fuel flammability boundaries in nitrogen, helium, carbon dioxide, and xenon environments at various oxygen concentrations and pressures to evaluate fire suppressants for spacecraft environments.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-39",
+       "acronym": "CFI",
+       "doc_type": "Presentations",
+       "file": "PSI-39_Presentations_Cool Flames in Space, a Hot Prospect on Earth_CFI.pdf",
+       "loc": "p.3",
+       "distance": 0.2151,
+       "excerpt": "[PSI-39 | CFI | Presentations | PSI-39_Presentations_Cool Flames in Space, a Hot Prospect on Earth_CFI] ISS FLEX Experiments - Background\n• Microgravity droplet combustion experiments aimed at\nunderstanding the flammability boundaries of liquid\nfuels in a variety of ambient conditions – spacecraft fire\nsafety\n• Sooting and non-sooting fuels are burned in nitrogen,\nhelium, carbon dioxide, and xenon environment at\nvarious oxygen concentrations at different pressures\n(effectiveness of fire suppress"
+      }
+     ]
+    },
+    {
+     "text": "Objectives of the PSI-23 ACME s-Flame experiment include identifying extinction limits for radiative heat loss, chemical kinetic blowout, and convective extinction at high and low system Damköhler numbers.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S6",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s-Flame 30-day report Inc 63 20201216.pdf",
+       "loc": "p.1",
+       "distance": 0.222,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s-Flame 30-day report Inc 63 20201216.pdf] are conducted with various inert diluents in both the \nfuel and chamber (oxidizer) atmosphere. The fuel gases include hydrogen and methane mixtures \nfor soot-free flames, and ethylene for sooty flames. One experimental objective is to identify the \nextinction limits for both radiative and chemical kinetic extinction, i.e., where the flame \nextinguishes from radiative heat loss or is “blown out,” respecti"
+      },
+      {
+       "id": "S7",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s_Flame_final_report_20210729.pdf",
+       "loc": "p.25",
+       "distance": 0.2233,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s_Flame_final_report_20210729.pdf] nd sooty flames; \n(ii) Obtain experimental data in simple, well-defined flow fields and understand various key \nelemental diffusion flame processes; \n(iii) Identify the extinction limits for both radiative and convective extinction (i.e., at high and \nlow system Damköhler numbers, respectively); \n(iv) Determine the existence, onset, and nature of pulsating instabilities that have been \ntheoretically predicted to"
+      }
+     ]
+    },
+    {
+     "text": "Objectives of the PSI-142 grant include developing flammability limit diagrams for diffusional cool flames, bridging extinction limits of hot and cool flames, and obtaining quantitative extinction limit data.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-142",
+       "acronym": "",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Objective",
+       "distance": 0.2039,
+       "excerpt": "[PSI-142 | Quantitative Studies of Cool Flame Transitions at  | Metadata] Objective: By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to: 1) Develop a new diagram of the flammability limits of diffusional cool flames affected by radiation, diffusion, and convection. 2) Bridge the knowle"
+      }
+     ]
+    },
+    {
+     "text": "In the PSI-23 ACME s-Flame experiment description, ignited droplets in a quiescent environment burn to completion or extinguish at a finite droplet radius.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf",
+       "loc": "p.8",
+       "distance": 0.2243,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf] T-2 \n\nThe FLEX-2 experiments involve dispensing, \ndeploying and igniting either a single droplet or a \npair of droplets, depending on the experiment \nconfiguration, in a known and controlled \ngaseous environment. The ignited droplets \neither burn to completion or the flame \nextinguishes at a finite droplet radius in a \nquiescent ambient. During the experiments \ninvolving binary droplet arrays, two droplets"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-39",
+    "PSI-23",
+    "PSI-142"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as background for future suppression research, not as proof that any suppression system works in a habitat."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future research on fire-suppression approaches (Earth analogues include fine water-mist systems), once tested at relevant gravity and atmosphere."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them.",
+    "Part of the question is not supported by the sources: see the Not in the data line in the assistant."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-02",
+   "theme": "Suppression systems",
+   "topic": "suppression & extinguishment",
+   "question": "Which experiments studied the effect of fire suppressants or extinguishment limits on flames?",
+   "title": "Which experiments studied the effect of fire suppressants or extinguishment limits on flames",
+   "summary": "The Flame Extinguishment Experiment (FLEX) (PSI-69) performed initial tests to determine the efficacy of fire suppressants under varying oxygen concentration and ambient pressure combinations.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "The Flame Extinguishment Experiment (FLEX) (PSI-69) performed initial tests to determine the efficacy of fire suppressants under varying oxygen concentration and ambient pressure combinations.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-69",
+       "acronym": "FLEX",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Title",
+       "distance": 0.2038,
+       "excerpt": "[PSI-69 | FLEX | Metadata] Title: Flame Extinguishment Experiment (FLEX)"
+      },
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf",
+       "loc": "p.8",
+       "distance": 0.2258,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf] deploy \nsingle droplets of fuel of predetermined and \nreproducible sizes (i.e., 2.0 mm to 6.0 mm) for \ncombustion studies designed to determine the \nefficacy of fire suppressants under varying \noxygen and pressure combinations and the \npropensity of a range of proposed habitable \natmospheres to support combustion. The use of \na droplet configuration for these experiments is \nsignificant because it allows a"
+      },
+      {
+       "id": "S8",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_AIAA presentation - ACME on the ISS Jan2012.pdf",
+       "loc": "p.4",
+       "distance": 0.2399,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_AIAA presentation - ACME on the ISS Jan2012.pdf] National Aeronautics and Space Administration\nISS Combustion Experiments\np\n• Flame Extinguishment (FLEX) \n– Combustion of a single liquid droplet\ngq p\n• Idealized spherically symmetric combustion greatly \nfacilitates computational and theoretical analysis\n– Initial tests on efficacy of fire suppressants in \nypp\nmicrogravity, followed by fundamental science\n– Operating since early 2009 i"
+      }
+     ]
+    },
+    {
+     "text": "The Flame Extinguishment Experiment - 2 (FLEX-2) (PSI-68) built upon FLEX to study droplet combustion and flame extinguishment using single droplets or pairs of droplets.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-68",
+       "acronym": "FLEX-2",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Title",
+       "distance": 0.2058,
+       "excerpt": "[PSI-68 | FLEX-2 | Metadata] Title: Flame Extinguishment Experiment - 2 (FLEX-2)"
+      },
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf",
+       "loc": "p.8",
+       "distance": 0.2258,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf] deploy \nsingle droplets of fuel of predetermined and \nreproducible sizes (i.e., 2.0 mm to 6.0 mm) for \ncombustion studies designed to determine the \nefficacy of fire suppressants under varying \noxygen and pressure combinations and the \npropensity of a range of proposed habitable \natmospheres to support combustion. The use of \na droplet configuration for these experiments is \nsignificant because it allows a"
+      },
+      {
+       "id": "S5",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.13",
+       "distance": 0.2371,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] 13\nblocks for more complex models of practical liquid fuels such as diesel and jet fuel. \nThe long-duration experiments on the ISS provide benchmark data that researchers \ncan develop, improve and ultimately validate detailed theoretical and numerical \nmodels of liquid hydrocarbon fuel combustion. The FLEX experiments performed \nto date demonstrated radiative and diffusive extinction,"
+      }
+     ]
+    },
+    {
+     "text": "The FLEX experiments demonstrated radiative and diffusive extinction, combustion instabilities, lower flammability limits, and a cool flame phenomenon after visible flame extinction.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.13",
+       "distance": 0.2371,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] 13\nblocks for more complex models of practical liquid fuels such as diesel and jet fuel. \nThe long-duration experiments on the ISS provide benchmark data that researchers \ncan develop, improve and ultimately validate detailed theoretical and numerical \nmodels of liquid hydrocarbon fuel combustion. The FLEX experiments performed \nto date demonstrated radiative and diffusive extinction,"
+      }
+     ]
+    },
+    {
+     "text": "The Structure and Response of Spherical Diffusion Flames (s-Flame) experiment (PSI-23) aimed to identify extinction limits for both radiative extinction and convective or chemical kinetic extinction.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S6",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s_Flame_final_report_20210729.pdf",
+       "loc": "p.25",
+       "distance": 0.2383,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s_Flame_final_report_20210729.pdf] nd sooty flames; \n(ii) Obtain experimental data in simple, well-defined flow fields and understand various key \nelemental diffusion flame processes; \n(iii) Identify the extinction limits for both radiative and convective extinction (i.e., at high and \nlow system Damköhler numbers, respectively); \n(iv) Determine the existence, onset, and nature of pulsating instabilities that have been \ntheoretically predicted to"
+      },
+      {
+       "id": "S7",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s-Flame 30-day report Inc 63 20201216.pdf",
+       "loc": "p.1",
+       "distance": 0.2393,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s-Flame 30-day report Inc 63 20201216.pdf] are conducted with various inert diluents in both the \nfuel and chamber (oxidizer) atmosphere. The fuel gases include hydrogen and methane mixtures \nfor soot-free flames, and ethylene for sooty flames. One experimental objective is to identify the \nextinction limits for both radiative and chemical kinetic extinction, i.e., where the flame \nextinguishes from radiative heat loss or is “blown out,” respecti"
+      }
+     ]
+    },
+    {
+     "text": "Research using FLEX experimental data (PSI-142) sought to develop flammability limit diagrams and obtain quantitative extinction limit data for cool and hot flames.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-142",
+       "acronym": "",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Objective",
+       "distance": 0.2046,
+       "excerpt": "[PSI-142 | Quantitative Studies of Cool Flame Transitions at  | Metadata] Objective: By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to: 1) Develop a new diagram of the flammability limits of diffusional cool flames affected by radiation, diffusion, and convection. 2) Bridge the knowle"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-69",
+    "PSI-23",
+    "PSI-68",
+    "PSI-142"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as background for future suppression research, not as proof that any suppression system works in a habitat."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future research on fire-suppression approaches (Earth analogues include fine water-mist systems), once tested at relevant gravity and atmosphere."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-03",
+   "theme": "Smoke / fire detection",
+   "topic": "smoke & detection",
+   "question": "What smoke or aerosol measurements were made, and in which experiments?",
+   "title": "What smoke or aerosol measurements were made, and in which experiments",
+   "summary": "In PSI-102 (SAME), smoke detection experiments were conducted in the Microgravity Science Glovebox (MSG) on the International Space Station (ISS) during Expedition 15.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-102 (SAME), smoke detection experiments were conducted in the Microgravity Science Glovebox (MSG) on the International Space Station (ISS) during Expedition 15.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-102",
+       "acronym": "SAME",
+       "doc_type": "Reports",
+       "file": "PSI-102_Reports_SAME_Final Science Report.pdf",
+       "loc": "p.51",
+       "distance": 0.2061,
+       "excerpt": "[PSI-102 | SAME | Reports | PSI-102_Reports_SAME_Final Science Report.pdf] 2008-01-2089 \nMeasurement of Smoke Particle Size under Low-Gravity \nConditions \nDavid L. Urban, Gary A. Ruff \n NASA Glenn Research Center \nGeorge W. Mulholland \nUniversity of Maryland \nThomas G. Cleary, Jiann C. Yang \nNational Institute of Standards and Technology \nZengguang Yuan \nNational Center for Space Exploration Research \nCopyright © 2008 SAE International\nABSTRACT \nSmoke detection experiments were conducted in the "
+      }
+     ]
+    },
+    {
+     "text": "In PSI-102 (SAME), particulate aerosol diagnostics measured different moments of the size distribution of smoke properties, which were combined to determine the count mean diameter.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-102",
+       "acronym": "SAME",
+       "doc_type": "Reports",
+       "file": "PSI-102_Reports_SAME_Final Science Report.pdf",
+       "loc": "p.51",
+       "distance": 0.2061,
+       "excerpt": "[PSI-102 | SAME | Reports | PSI-102_Reports_SAME_Final Science Report.pdf] 2008-01-2089 \nMeasurement of Smoke Particle Size under Low-Gravity \nConditions \nDavid L. Urban, Gary A. Ruff \n NASA Glenn Research Center \nGeorge W. Mulholland \nUniversity of Maryland \nThomas G. Cleary, Jiann C. Yang \nNational Institute of Standards and Technology \nZengguang Yuan \nNational Center for Space Exploration Research \nCopyright © 2008 SAE International\nABSTRACT \nSmoke detection experiments were conducted in the "
+      }
+     ]
+    },
+    {
+     "text": "In PSI-101 (SAME-R), additional diagnostic measurements were included during testing conducted on Expedition 24.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-101",
+       "acronym": "SAME-R",
+       "doc_type": "Reports",
+       "file": "PSI-101_Reports_SAME-R_Final Report.pdf",
+       "loc": "p.72",
+       "distance": 0.2149,
+       "excerpt": "[PSI-101 | SAME-R | Reports | PSI-101_Reports_SAME-R_Final Report.pdf] Appendix F: \nParticle Morphology and Size Results from the Smoke \nAerosol Measurement Experiment-2 \nDavid L. Urban1, Gary A. Ruff2, Paul S. Greenberg3, David Fischer4, Marit Meyer5 \nNASA Glenn Research Center, Cleveland, Ohio 44135 \nGeorge Mulholland6 \nThe University of Maryland, College Park, Maryland 20742 \n\nZeng-guang Yuan7, Victoria Bryg8 \nNational Center for Space Exploration Research, Cleveland, Ohio 44135 \nand \nThomas "
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-102",
+    "PSI-101"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these measurements as input for thinking about how smoke detection might be evaluated in microgravity."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future evaluation of smoke and fire detectors, since smoke behaves differently in microgravity."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-04",
+   "theme": "Smoke / fire detection",
+   "topic": "smoke & detection",
+   "question": "What did the SAFFIRE smoke detector channels record?",
+   "title": "What did the SAFFIRE smoke detector channels record",
+   "summary": "In PSI-98 SAFFIRE-I telemetry data, FIZ1 Smoke Detector Obscuration measured a minimum of -0.005 V, maximum of 0.0 V, and mean of -0.0006358 V.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-98 SAFFIRE-I telemetry data, FIZ1 Smoke Detector Obscuration measured a minimum of -0.005 V, maximum of 0.0 V, and mean of -0.0006358 V.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S6",
+       "psi": "PSI-98",
+       "acronym": "SAFFIRE-I",
+       "doc_type": "Excel summary",
+       "file": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2791,
+       "excerpt": "PSI-98 SAFFIRE-I (sheet CygnusData, summary): file PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx; 8072 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabin Fan Delta P (Pa), body rate x axis (rad/s"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-98 SAFFIRE-I telemetry data, FIZ 2 Smoke Detector Obscuration measured a minimum of -4.395 V, maximum of 3.845 V, and mean of 0.4239 V, including a reading of 3.835 V at a relative time of 15850.0 s.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-98",
+       "acronym": "SAFFIRE-I",
+       "doc_type": "Excel row",
+       "file": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+       "loc": "CygnusSmokeDetectorData row 280",
+       "distance": 0.2782,
+       "excerpt": "PSI-98 SAFFIRE-I (sheet CygnusSmokeDetectorData, row 280): CygnusTimestamp: 1465937775519; Relative Time (ms): 15853806; Relative Time (s): 15850.0; FIZ 2 Smoke Detector Obscuration (V): 3.835"
+      },
+      {
+       "id": "S6",
+       "psi": "PSI-98",
+       "acronym": "SAFFIRE-I",
+       "doc_type": "Excel summary",
+       "file": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2791,
+       "excerpt": "PSI-98 SAFFIRE-I (sheet CygnusData, summary): file PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx; 8072 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabin Fan Delta P (Pa), body rate x axis (rad/s"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-98 SAFFIRE-I telemetry data, FIZ 1 Smoke Detector Scatterometer recorded a minimum of 0.0 V, maximum of 0.0 V, and mean of 0.0 V, while FIZ 2 Scatterometer recorded a minimum of 0.0 V, maximum of 2.9 V, and mean of 0.03928 V.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S6",
+       "psi": "PSI-98",
+       "acronym": "SAFFIRE-I",
+       "doc_type": "Excel summary",
+       "file": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2791,
+       "excerpt": "PSI-98 SAFFIRE-I (sheet CygnusData, summary): file PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx; 8072 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabin Fan Delta P (Pa), body rate x axis (rad/s"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III 1 Hz telemetry data, FIZ1 Smoke Detector Obscuration recorded a minimum, maximum, and mean of 0.0 V, and FIZ 1 Scatterometer recorded a minimum of 0.0 V, maximum of 0.005 V, and mean of 8.734e-07 V.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III 1 Hz Telemetry Data.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2705,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusData, summary): file PSI-100_Raw Data_Saffire-III 1 Hz Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press EPS 1 (psi), PCM Press ECM 2 (psi), PCM Press EPS 3 (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabi"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III 1 Hz telemetry data, FIZ 2 Smoke Detector Obscuration measured a minimum of 0.0 V, maximum of 3.835 V, and mean of 0.3371 V, while FIZ 2 Scatterometer recorded a minimum of 0.0 V, maximum of 1.805 V, and mean of 0.01357 V.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III 1 Hz Telemetry Data.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2705,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusData, summary): file PSI-100_Raw Data_Saffire-III 1 Hz Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press EPS 1 (psi), PCM Press ECM 2 (psi), PCM Press EPS 3 (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabi"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III telemetry data, FIZ 2 Smoke Detector Obscuration recorded a minimum of -4.235 V, maximum of 3.835 V, and mean of 0.4976 V.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2752,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusData, summary): file PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press EPS 1 (psi), PCM Press ECM 2 (psi), PCM Press EPS 3 (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabin Fan"
+      },
+      {
+       "id": "S3",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx",
+       "loc": "CygnusSmokeDetectorData summary",
+       "distance": 0.2759,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusSmokeDetectorData, summary): file PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), FIZ 2 Smoke Detector Obscuration (V), CygnusTimestamp #2, Relative Time (ms) #2, Relative Time (s) #2, FIZ 2 Smoke Detector Scatterometer (V); CygnusTimestamp: min -62140000000000.0, max 1497000000000.0, mean 1480000000000.0; Relative Time (ms): min -63630000000000.0, max 9573000.0, mean -16540000000"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III telemetry data, FIZ 1 Smoke Detector Scatterometer measured a mean of 1.3e-06 V (with a min of 0.0 V and max of 0.005 V), while FIZ 2 Scatterometer recorded a mean of 0.02044 V (with a min of 0.0 V and max of 1.805 V).",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx",
+       "loc": "CygnusData summary",
+       "distance": 0.2752,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusData, summary): file PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), PCM Air Temp (degC), PCM Press EPS 1 (psi), PCM Press ECM 2 (psi), PCM Press EPS 3 (psi), PCM Press/Temp (psi/K), FIZ1 Smoke Detector Obscuration (V), FIZ 2 Smoke Detector Obscuration (V), FIZ 1 Smoke Detector Scatterometer (V), FIZ 2 Smoke Detector Scatterometer (V), FIZ 1 Cabin Fan delta P (Pa), FIZ 2 Cabin Fan"
+      },
+      {
+       "id": "S3",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Excel summary",
+       "file": "PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx",
+       "loc": "CygnusSmokeDetectorData summary",
+       "distance": 0.2759,
+       "excerpt": "PSI-100 SAFFIRE-III (sheet CygnusSmokeDetectorData, summary): file PSI-100_Raw Data_Saffire-III Telemetry Data.xlsx; 58305 data rows; columns: CygnusTimestamp, Relative Time (ms), Relative Time (s), FIZ 2 Smoke Detector Obscuration (V), CygnusTimestamp #2, Relative Time (ms) #2, Relative Time (s) #2, FIZ 2 Smoke Detector Scatterometer (V); CygnusTimestamp: min -62140000000000.0, max 1497000000000.0, mean 1480000000000.0; Relative Time (ms): min -63630000000000.0, max 9573000.0, mean -16540000000"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-98",
+    "PSI-100"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these measurements as input for thinking about how smoke detection might be evaluated in microgravity."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future evaluation of smoke and fire detectors, since smoke behaves differently in microgravity."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-05",
+   "theme": "Fire-resistant materials",
+   "topic": "flammability",
+   "question": "Which solid materials were burned in the experiments, and how did they burn?",
+   "title": "Which solid materials were burned in the experiments, and how did they burn",
+   "summary": "(PSI-25 BASS-II): The Burning and Suppression of Solids - II (BASS-II) experiment included the study of thick Polymethylmethacrylate (PMMA) slab samples.",
+   "evidence_label": "source_reported",
+   "outcome": "partial",
+   "claims": [
+    {
+     "text": "(PSI-25 BASS-II): The Burning and Suppression of Solids - II (BASS-II) experiment included the study of thick Polymethylmethacrylate (PMMA) slab samples.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.7",
+       "distance": 0.2852,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] ture Rise Estimates for Burning and \nSuppression of Solids—II Thick Polymethylmethacrylate Slab Samples ........................................ 121 \nD.1 Symbols ................................................................................................................................... 121 \nD.2 Introduction................................................................................................................"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-25 BASS-II): For thin fuels, the sample width affected the spread rate, and flames generally spread faster during two-sided burns than one-sided burns.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.71",
+       "distance": 0.297,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] NASA/TM-20210011385 63 \n5.7 Conclusions \nThe Burning and Suppression of Solids (BASS) experiments gave some of the first ever data \nregarding combustion of thick fuels in microgravity. The two-sided summary graphs show that for thin \nfuels, sample width affects the spread rate. In general, the flames spread faster for two-sided burns \ncompared to one-sided burns. The greater the thickness of the fuel, the greater is the tim"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-25 BASS-II): The spread rate decreased as fuel thickness increased because thicker fuel took more time for the flame to spread.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.71",
+       "distance": 0.297,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] NASA/TM-20210011385 63 \n5.7 Conclusions \nThe Burning and Suppression of Solids (BASS) experiments gave some of the first ever data \nregarding combustion of thick fuels in microgravity. The two-sided summary graphs show that for thin \nfuels, sample width affects the spread rate. In general, the flames spread faster for two-sided burns \ncompared to one-sided burns. The greater the thickness of the fuel, the greater is the tim"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-20 ACME BRE): Quasi-steady burning of condensed-phase materials, such as PMMA and Nylon, occurred in microgravity even without air flow.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-20",
+       "acronym": "ACME BRE",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2972,
+       "excerpt": "[PSI-20 | ACME BRE | Metadata] Research impacts: BRE yielded important data relevant to spacecraft fire safety. Quasi-steady burning corresponding to various condensed-phase materials (such as PMMA and Nylon) was observed in microgravity despite the absence of air flow, where the cessation of ventilation is an established step in putting out spacecraft fires. The ongoing combustion without air flow was notably seen in elevated-oxygen atmospheres which are being considered for use in future space"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-20 ACME BRE): In atmospheres with 21% oxygen and no air flow, flames self-extinguished in a short time.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-20",
+       "acronym": "ACME BRE",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2972,
+       "excerpt": "[PSI-20 | ACME BRE | Metadata] Research impacts: BRE yielded important data relevant to spacecraft fire safety. Quasi-steady burning corresponding to various condensed-phase materials (such as PMMA and Nylon) was observed in microgravity despite the absence of air flow, where the cessation of ventilation is an established step in putting out spacecraft fires. The ongoing combustion without air flow was notably seen in elevated-oxygen atmospheres which are being considered for use in future space"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-20 ACME BRE): Combustion without air flow continued in elevated-oxygen atmospheres.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-20",
+       "acronym": "ACME BRE",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2972,
+       "excerpt": "[PSI-20 | ACME BRE | Metadata] Research impacts: BRE yielded important data relevant to spacecraft fire safety. Quasi-steady burning corresponding to various condensed-phase materials (such as PMMA and Nylon) was observed in microgravity despite the absence of air flow, where the cessation of ventilation is an established step in putting out spacecraft fires. The ongoing combustion without air flow was notably seen in elevated-oxygen atmospheres which are being considered for use in future space"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-101 SAME-R): Solid particulate smokes were planned for generation using Teflon and Kapton, which are standard wire insulation materials.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-101",
+       "acronym": "SAME-R",
+       "doc_type": "Engineering Documents",
+       "file": "PSI-101_Engineering Documents_SAME EIRD Rev 2.00 02-25-05 HIgh Q.pdf",
+       "loc": "p.34",
+       "distance": 0.2829,
+       "excerpt": "[PSI-101 | SAME-R | Engineering Documents | PSI-101_Engineering Documents_SAME EIRD Rev 2.00 02-25-05 HIgh Q.pdf] of liquid and solid particulates. The two solid \nparticulate smokes will be generated using Teflon and Kapton both of which are in the standard wire \ninsulation materials for the ISS and the shuttle respectively and can be expected to be among the early \nsmoke products. As seen in the CSD experiment [Urban, Griffin and Gard 1997 a & b)] these two \nmaterials produce significantly diff"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-26 BASS): This experiment examined fuels thicker than thin ground-based sheets, including wake flames with characteristics of a fire burning behind another object.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-26",
+       "acronym": "BASS",
+       "doc_type": "Science Documents",
+       "file": "PSI-26_Science Documents_SRD_BASS.pdf",
+       "loc": "p.3",
+       "distance": 0.2889,
+       "excerpt": "[PSI-26 | BASS | Science Documents | PSI-26_Science Documents_SRD_BASS.pdf] d microgravity tests, and actual material flammability in space. \nThe relation between these can be investigated by observing flames burning for the \nlonger times available in flight. Practical materials in typical geometries will be \nexamined, including wake flames which have characteristics of a fire burning behind \nanother object (for example, a fire burning in tight area which may not be easily \naccessible). Fuels ca"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-25",
+    "PSI-20",
+    "PSI-101",
+    "PSI-26"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to how materials might be screened for enclosed habitats."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future evaluation of fire-resistant materials for enclosed habitats. It does not certify any material for spacecraft use."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them.",
+    "Part of the question is not supported by the sources: see the Not in the data line in the assistant."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "ins-06",
+   "theme": "Fire-resistant materials",
+   "topic": "flame spread",
+   "question": "How did airflow or oxygen concentration affect flame spread over solid materials?",
+   "title": "How did airflow or oxygen concentration affect flame spread over solid materials",
+   "summary": "In PSI-25 BASS-II, flames spread over the fuel surface without burning through at near-air oxygen concentrations for both one-sided and two-sided samples.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-25 BASS-II, flames spread over the fuel surface without burning through at near-air oxygen concentrations for both one-sided and two-sided samples.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.66",
+       "distance": 0.1952,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] umption plays a more important role than \nwhen the sample is extremely thin (Refs. 7 and 8). The objective was to obtain microgravity data for flame \nspread over a thick fuel and compare the results to data from the normal-gravity NCA that uses a small-\nheight flow duct to suppress buoyant flow. Quenching extinction data was also obtained at finite flow rates \nfor most of the tests. Preliminary comparisons have been publish"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-25 BASS-II, reducing oxygen concentrations to approximately 19 percent prevented flames from spreading across the surface of two-sided fuel samples, causing the fuel to be completely consumed from the trailing edge instead.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.66",
+       "distance": 0.1952,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] umption plays a more important role than \nwhen the sample is extremely thin (Refs. 7 and 8). The objective was to obtain microgravity data for flame \nspread over a thick fuel and compare the results to data from the normal-gravity NCA that uses a small-\nheight flow duct to suppress buoyant flow. Quenching extinction data was also obtained at finite flow rates \nfor most of the tests. Preliminary comparisons have been publish"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 s-Flame, flames in low-speed airflows may preferentially spread into the oncoming airflow depending on the flow speed.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.18",
+       "distance": 0.2018,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] ot be valid for most spacecraft environments where ventilation flow \nstrongly enhances flames. In the low-flow conditions of microgravity or partial \ngravity, some materials are flammable at lower oxygen concentrations than in \nnormal gravity (Figure 8). Materials are easier to ignite in low gravity because of \nreduced natural convective cooling from the fuel surface. Once established"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 s-Flame, thin fuels ignited at the middle in microgravity spread upstream into the oncoming airflow at low forced-flow velocities.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.31",
+       "distance": 0.2019,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] s the ambient oxygen mole fraction and the \nabscissa the gas velocity across the solid surface. The boundary represents limit of \nsteady flame spread. Outside of this boundary, steady flame spread does not occur; \ninside, it does. The curve identifies a much lower flammability limit than originally \npredicted. For flame spread across solid materials, the characteristic gas velocity \no"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 s-Flame, for flame spread across solid materials, the characteristic gas velocity of the minimum in the flammability limit curve is on the order of 10 cm/s, which also corresponds to a maximum in the flame spread rate.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.31",
+       "distance": 0.2019,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] s the ambient oxygen mole fraction and the \nabscissa the gas velocity across the solid surface. The boundary represents limit of \nsteady flame spread. Outside of this boundary, steady flame spread does not occur; \ninside, it does. The curve identifies a much lower flammability limit than originally \npredicted. For flame spread across solid materials, the characteristic gas velocity \no"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-25",
+    "PSI-23"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to how materials might be screened for flame spread in enclosed habitats."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future screening tests of how fire spreads over materials in enclosed habitats."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-07",
+   "theme": "Crew protection",
+   "topic": "flammability",
+   "question": "What do the sources say about fire risk to spacecraft or crew safety?",
+   "title": "What do the sources say about fire risk to spacecraft or crew safety",
+   "summary": "In PSI-23 ACME s-Flame, a fire or explosion requires fuel, oxygen, and an ignition source, all three of which are present in crewed spacecraft.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-23 ACME s-Flame, a fire or explosion requires fuel, oxygen, and an ignition source, all three of which are present in crewed spacecraft.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.35",
+       "distance": 0.1662,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] 35\nhighlight the hazard posed by accidental fires on spacecraft. A fire or explosion \nrequires all elements of the “fire triangle” to be present: fuel, oxygen and a source of \nignition. Crewed spacecraft, by necessity, contain all three. In addition, spacecraft \nfrequently operate at an ambient oxygen mole fraction higher than that of air, have \nlimited options for escape, and have al"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 ACME s-Flame, spacecraft frequently operate at an ambient oxygen mole fraction higher than that of air, have limited escape options, and have almost no tolerance for damage to critical life support systems.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.35",
+       "distance": 0.1662,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] 35\nhighlight the hazard posed by accidental fires on spacecraft. A fire or explosion \nrequires all elements of the “fire triangle” to be present: fuel, oxygen and a source of \nignition. Crewed spacecraft, by necessity, contain all three. In addition, spacecraft \nfrequently operate at an ambient oxygen mole fraction higher than that of air, have \nlimited options for escape, and have al"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III, using terrestrial fires and fire standards to design spacecraft fire safety systems presents an inherent risk to the vehicle due to a significant level of uncertainty.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Hypothesis",
+       "distance": 0.1876,
+       "excerpt": "[PSI-100 | SAFFIRE-III | Metadata] Hypothesis: This investigation hypothesizes that due to large differences between fire behavior in normal and reduced gravity, the use of terrestrial fires and fire standards to design spacecraft fire safety systems presents an inherent risk to the vehicle because of the significant level of uncertainty. While this approach has been successful thus far, the uncertainty and risk will increase as exploration missions venture further from earth with considerably l"
+      },
+      {
+       "id": "S4",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Science Documents",
+       "file": "PSI-100_Science Documents_SAFFIRE Objectives, Development and Status.pdf",
+       "loc": "p.1",
+       "distance": 0.2058,
+       "excerpt": "[PSI-100 | SAFFIRE-III | Science Documents | PSI-100_Science Documents_SAFFIRE Objectives, Development and Status.p] d to samples no larger than \n10 cm in length and width whereas a serious spacecraft \nfire would likely be much larger and consume much \nmore material. Because of the large differences between \nfire behavior in normal and reduced gravity, there is a \nsignificant lack of data available for spacecraft \ndesigners on which to base their fire safety designs and \nprocedures. The use of t"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-100 SAFFIRE-III, fire safety risk and uncertainty increase as exploration missions venture further from Earth with considerably longer transit times for a safe return.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Hypothesis",
+       "distance": 0.1876,
+       "excerpt": "[PSI-100 | SAFFIRE-III | Metadata] Hypothesis: This investigation hypothesizes that due to large differences between fire behavior in normal and reduced gravity, the use of terrestrial fires and fire standards to design spacecraft fire safety systems presents an inherent risk to the vehicle because of the significant level of uncertainty. While this approach has been successful thus far, the uncertainty and risk will increase as exploration missions venture further from earth with considerably l"
+      },
+      {
+       "id": "S4",
+       "psi": "PSI-100",
+       "acronym": "SAFFIRE-III",
+       "doc_type": "Science Documents",
+       "file": "PSI-100_Science Documents_SAFFIRE Objectives, Development and Status.pdf",
+       "loc": "p.1",
+       "distance": 0.2058,
+       "excerpt": "[PSI-100 | SAFFIRE-III | Science Documents | PSI-100_Science Documents_SAFFIRE Objectives, Development and Status.p] d to samples no larger than \n10 cm in length and width whereas a serious spacecraft \nfire would likely be much larger and consume much \nmore material. Because of the large differences between \nfire behavior in normal and reduced gravity, there is a \nsignificant lack of data available for spacecraft \ndesigners on which to base their fire safety designs and \nprocedures. The use of t"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-102 SAME, fires, leaks, and spills are among the most significant hazards that must be accounted for in the design of spacecraft environmental control and life-support systems.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-102",
+       "acronym": "SAME",
+       "doc_type": "Reports",
+       "file": "PSI-102_Reports_SAME_Final Science Report.pdf",
+       "loc": "p.3",
+       "distance": 0.2117,
+       "excerpt": "[PSI-102 | SAME | Reports | PSI-102_Reports_SAME_Final Science Report.pdf] iii \n\nSmoke Aerosol Measurement Experiment (SAME) \n\nAbstract \n\nLeaks, fires, and spills are some of the most significant hazards that must be accounted for in the \ndesign of the environmental control and life-su pport system on spacecraft. While prevention is \ncertainly the first line of defens e against a fire, early detection of a overheat event or an actual \nfire allows the crew to res pond before the hazard gets out o"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-102 SAME, limited options available for response to a spacecraft fire increase the importance of detecting the fire at an earlier stage than is typical for terrestrial applications.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-102",
+       "acronym": "SAME",
+       "doc_type": "Reports",
+       "file": "PSI-102_Reports_SAME_Final Science Report.pdf",
+       "loc": "p.3",
+       "distance": 0.2117,
+       "excerpt": "[PSI-102 | SAME | Reports | PSI-102_Reports_SAME_Final Science Report.pdf] iii \n\nSmoke Aerosol Measurement Experiment (SAME) \n\nAbstract \n\nLeaks, fires, and spills are some of the most significant hazards that must be accounted for in the \ndesign of the environmental control and life-su pport system on spacecraft. While prevention is \ncertainly the first line of defens e against a fire, early detection of a overheat event or an actual \nfire allows the crew to res pond before the hazard gets out o"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-102 SAME, six overheat and failed component events occurred in the NASA Orbiter fleet, none of which spread into a real fire.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-102",
+       "acronym": "SAME",
+       "doc_type": "Reports",
+       "file": "PSI-102_Reports_SAME_Final Science Report.pdf",
+       "loc": "p.61",
+       "distance": 0.2117,
+       "excerpt": "[PSI-102 | SAME | Reports | PSI-102_Reports_SAME_Final Science Report.pdf] American Institute of Aeronautics and Astronautics \n\n3\nAs a result of these design decisions, the \nISS and the Orbiter detectors are sensitive to \nparticles in different size ranges. In both \ncases the designs were based upon the best \navailable data however, due to the complete \nabsence of low-g data concerning the nature \nof particulate and radiant emission from \nincipient and fully developed low-g fires, \ndifferent con"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-23",
+    "PSI-100",
+    "PSI-102"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to how materials might be screened for enclosed habitats."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future evaluation of fire-resistant materials for enclosed habitats. It does not certify any material for spacecraft use."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-08",
+   "theme": "Crew protection",
+   "topic": "flammability",
+   "question": "What do the sources say about how fires behave differently in low gravity than in normal gravity?",
+   "title": "What do the sources say about how fires behave differently in low gravity than in normal gravity",
+   "summary": "In PSI-23 ACME s-Flame, the onset of smoke production in low gravity is substantially different than in normal gravity.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-23 ACME s-Flame, the onset of smoke production in low gravity is substantially different than in normal gravity.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.32",
+       "distance": 0.1721,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] gravity studies) in the observed flame heights of jet flames at low and moderate \njet Reynolds numbers (e.g., Hegde et al., 1994; Urban et al., 1998). The onset of \nsmoke production found in low gravity is substantially different than in normal \ngravity and contrary to predictions in prior literature. The experiments also show \nsignificant differences in the size of the primary soot p"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 ACME s-Flame, low-gravity tests show significant differences in the size of primary soot particles and a larger fractal dimension of soot agglomerates.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.32",
+       "distance": 0.1721,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] gravity studies) in the observed flame heights of jet flames at low and moderate \njet Reynolds numbers (e.g., Hegde et al., 1994; Urban et al., 1998). The onset of \nsmoke production found in low gravity is substantially different than in normal \ngravity and contrary to predictions in prior literature. The experiments also show \nsignificant differences in the size of the primary soot p"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 ACME s-Flame, at airflow velocities below those induced by buoyancy, ignition times are significantly lower than those observed in normal-gravity buoyant flows.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gravity.pdf",
+       "loc": "p.24",
+       "distance": 0.1894,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ISS Researchers Guide - Combustion In Reduced Gra] ests have been conducted. However, because of the limited, \nreduced gravity time, ignition times could be obtained only at high, radiant heat \nfluxes. At airflow velocities below those induced by buoyancy, ignition times reach \nvalues that are significantly lower than those observed in normal-gravity buoyant \nflows. The reduction of the ignition times indicates that, under these low-f"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-10 ACME/Flame Design, flame flicker driven by buoyancy is eliminated, resulting in quasi-steady flames in microgravity.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.44",
+       "distance": 0.2057,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] le, the flicker of flame, which is a \nbuoyancy-driven (i.e., gravity-driven) instability, is eliminated yielding quasi-steady flames in \nmicrogravity. Length scales are increased in microgravity flames facilitating analysis of the flame \nstructure. Momentum-dominated flames, which are important for most practical combustion, \ncan be studied at low velocities to simplify analysis. Microgravity flames tend to have"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-10 ACME/Flame Design, length scales are increased in microgravity flames.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S8",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.44",
+       "distance": 0.2057,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] le, the flicker of flame, which is a \nbuoyancy-driven (i.e., gravity-driven) instability, is eliminated yielding quasi-steady flames in \nmicrogravity. Length scales are increased in microgravity flames facilitating analysis of the flame \nstructure. Momentum-dominated flames, which are important for most practical combustion, \ncan be studied at low velocities to simplify analysis. Microgravity flames tend to have"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-10 ACME/Flame Design, microgravity flames display a much stronger sensitivity to their atmosphere, a broader range of characteristics, longer residence times, and a near absence of buoyant entrainment compared to normal-gravity flames.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.33",
+       "distance": 0.2046,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] , which are important for most practical combustion, \ncan be studied at low velocities to simplify analysis. Microgravity flames tend to have a much \nstronger sensitivity to their atmosphere and exhibit a much broader range of characteristics than \nnormal-gravity flames because of the near absence of buoyant entrainment. The long residence \ntimes in microgravity flames can lead to strong soot production, but man"
+      },
+      {
+       "id": "S8",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.44",
+       "distance": 0.2057,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] le, the flicker of flame, which is a \nbuoyancy-driven (i.e., gravity-driven) instability, is eliminated yielding quasi-steady flames in \nmicrogravity. Length scales are increased in microgravity flames facilitating analysis of the flame \nstructure. Momentum-dominated flames, which are important for most practical combustion, \ncan be studied at low velocities to simplify analysis. Microgravity flames tend to have"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-26 BASS, reduced buoyant flows combined with low-speed air circulation currents create an environment different from normal Earth gravity.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-26",
+       "acronym": "BASS",
+       "doc_type": "Science Documents",
+       "file": "PSI-26_Science Documents_SRD_BASS.pdf",
+       "loc": "p.3",
+       "distance": 0.1862,
+       "excerpt": "[PSI-26 | BASS | Science Documents | PSI-26_Science Documents_SRD_BASS.pdf] February 2010 3 \n\nBackground \n\nFlame spread behavior, flammability, and suppression data are of interest to NASA for \napplication to fire safety efforts. The reduced buoyant flows, coupled with low-speed air \ncirculation currents, create an environment quite different than normal Earth gravity. In \naddition, there are several oxidizer atmospheres proposed for crew-manned vehicles \nand habitats [NASA CxP-70024], which fur"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-23",
+    "PSI-10",
+    "PSI-26"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to how materials might be screened for enclosed habitats."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform future evaluation of fire-resistant materials for enclosed habitats. It does not certify any material for spacecraft use."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-09",
+   "theme": "Monitoring / control systems",
+   "topic": "modeling & simulation",
+   "question": "What sensors, cameras or instruments were used to monitor the flames and the environment?",
+   "title": "What sensors, cameras or instruments were used to monitor the flames and the environment",
+   "summary": "In PSI-10 (ACME/Flame Design) and PSI-23 (ACME s-Flame), imaging diagnostics include five video cameras and two illumination systems, with three cameras belonging to the CIR facility.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-10 (ACME/Flame Design) and PSI-23 (ACME s-Flame), imaging diagnostics include five video cameras and two illumination systems, with three cameras belonging to the CIR facility.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Engineering Documents",
+       "file": "PSI-10_Engineering Documents_ACME Engineering Implementation Rpt..pdf",
+       "loc": "p.7",
+       "distance": 0.2712,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Engineering Documents | PSI-10_Engineering Documents_ACME Engineering Implementation Rpt..pdf] instead limited as an additional hazard control. \n\nACME’s primary flame diagnostics are a suite of imaging systems including five video cameras and \ntwo illumination systems, of which three cameras are part of the CIR facility and are already in \nuse on orbit. All but one of the cameras is mounted outside of the chamber. Collectively, the \nimaging systems will enable color"
+      },
+      {
+       "id": "S2",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s_Flame_final_report_20210729.pdf",
+       "loc": "p.11",
+       "distance": 0.274,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s_Flame_final_report_20210729.pdf] tems including five video cameras and \ntwo illumination systems, of which three cameras are part of the CIR facility and are already in \nuse on orbit. All but one of the cameras is mounted outside of the chamber. Collectively, the \nimaging systems will enable color, CH*, and OH* imaging; pyrometry; measurement of the soot \nvolume fraction; and operational support. However, it is unlikely that all functions would"
+      },
+      {
+       "id": "S3",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.11",
+       "distance": 0.283,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] lectively, the \nimaging systems will enable color, CH*, and OH* imaging; pyrometry; measurement of the soot \nvolume fraction; and operational support. However, it is unlikely that all functions would be \nexercised at any one time as will become apparent in the subsequent discussion. \n\nColor imaging is provided by two cameras: a high-definition digital camera mounted outside of \nthe chamber and a standard analog "
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 (ACME s-Flame), color imaging is provided by a high-definition 12-bit digital camera recording at up to 30 full frames (1360x1024) per second with a motorized lens, alongside a standard analog color camera downlinked in near real time.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Engineering Documents",
+       "file": "PSI-10_Engineering Documents_ACME Engineering Implementation Rpt..pdf",
+       "loc": "p.7",
+       "distance": 0.2712,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Engineering Documents | PSI-10_Engineering Documents_ACME Engineering Implementation Rpt..pdf] instead limited as an additional hazard control. \n\nACME’s primary flame diagnostics are a suite of imaging systems including five video cameras and \ntwo illumination systems, of which three cameras are part of the CIR facility and are already in \nuse on orbit. All but one of the cameras is mounted outside of the chamber. Collectively, the \nimaging systems will enable color"
+      },
+      {
+       "id": "S2",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s_Flame_final_report_20210729.pdf",
+       "loc": "p.11",
+       "distance": 0.274,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s_Flame_final_report_20210729.pdf] tems including five video cameras and \ntwo illumination systems, of which three cameras are part of the CIR facility and are already in \nuse on orbit. All but one of the cameras is mounted outside of the chamber. Collectively, the \nimaging systems will enable color, CH*, and OH* imaging; pyrometry; measurement of the soot \nvolume fraction; and operational support. However, it is unlikely that all functions would"
+      },
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_PS-01548 ACME info sheet.pdf",
+       "loc": "p.2",
+       "distance": 0.2839,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_PS-01548 ACME info sheet.pdf] exchangeable array with up to ﬁve additional \n radiometers, where all sensors are sensitive from 0.2 to 11 microns\nPhotomultiplier Tube (PMT) Modules\n•Three wide-view PMTs: (1) broadband, 230 to 700 nm, (2) OH* emission, 310-nm ﬁlter, \n and (3) CH* emission, 430-nm ﬁlter\nAnalog Color Camera (hidden from view)\n• Downlinked in near real time to support operations, with an array of light-emitting diodes \n (L"
+      },
+      {
+       "id": "S8",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_ACME_CSSCI_2014.pdf",
+       "loc": "p.8",
+       "distance": 0.2916,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_ACME_CSSCI_2014.pdf] 8 \n\ncamera signal will be downlinked in near real time to support the experiment operations. Light-\nemitting diodes within the chamber can be used to illuminate the igniter and burner to both \nsupport the operations and provide reference images. The 12-bit digital camera records at up to \n30 full frames (1360x1024) per second, and is equipped with a motorized lens with independent \ncontrol of the zoom, iris, and f"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 (ACME s-Flame), available sensors and instruments include an exchangeable radiometer array sensitive from 0.2 to 11 microns, three wide-view photomultiplier tube (PMT) modules, an intensified monochrome OH* camera, pressure measurement, gas composition, accelerometry, and CIR diagnostic packages (HiBMs, Illumination Package, and LLL-UV).",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S4",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_PS-01548 ACME info sheet.pdf",
+       "loc": "p.2",
+       "distance": 0.2839,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_PS-01548 ACME info sheet.pdf] exchangeable array with up to ﬁve additional \n radiometers, where all sensors are sensitive from 0.2 to 11 microns\nPhotomultiplier Tube (PMT) Modules\n•Three wide-view PMTs: (1) broadband, 230 to 700 nm, (2) OH* emission, 310-nm ﬁlter, \n and (3) CH* emission, 430-nm ﬁlter\nAnalog Color Camera (hidden from view)\n• Downlinked in near real time to support operations, with an array of light-emitting diodes \n (L"
+      },
+      {
+       "id": "S6",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Presentations",
+       "file": "PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf",
+       "loc": "p.6",
+       "distance": 0.2897,
+       "excerpt": "[PSI-23 | ACME s-Flame | Presentations | PSI-23_Presentations_CIR Paper 59th IAC 2008.pdf] 6 \ncollection and storage. These include visible \nand ultraviolet imaging, pressure measurement, \ngas composition, and accelerometry. The \nexperiment team and the CIR jointly provide the \nother set of diagnostics. The diagnostics may \ninclude infrared and color imaging, temperature \nmeasurements, and flame radiation. \n\nThe diagnostic devices provided by the CIR are \nthe High-Bit Depth Multispectral Imaging"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-23 (ACME s-Flame), ISS image data collection utilized the ACME DataCam, CFI intensified camera (with CH*, formaldehyde, or UV fused silica filters), Low Light Level Ultraviolet (LLL-UV) camera with an OH* filter, and High-Bitdepth Multispectral (HiBMs) camera.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S7",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Reports",
+       "file": "PSI-23_Reports_s_Flame_final_report_20210729.pdf",
+       "loc": "p.106",
+       "distance": 0.2901,
+       "excerpt": "[PSI-23 | ACME s-Flame | Reports | PSI-23_Reports_s_Flame_final_report_20210729.pdf] ACME/s-Flame Final Report (2021) 29 July 2021 \n106 \n\nAppendix M. Summary of the ISS data collection \nThe s-Flame data is all digital and includes both image and non-image data, where this is true for the other \nACME experiments. To be clear, there was no collection of soot or other physical samples that were \nsubsequently transported to the ground. \n\nThe s-Flame image data includes images from the following came"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-159 (ACME CFI-G), PMT-2 measurements (sensitive to 230–700 nm) were analyzed to determine flame durations and investigate the presence of cool flames.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-159",
+       "acronym": "ACME CFI-G",
+       "doc_type": "Reports",
+       "file": "PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf",
+       "loc": "p.33",
+       "distance": 0.2842,
+       "excerpt": "[PSI-159 | ACME CFI-G | Reports | PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf] formats respectively for the CFI intensified camera and ACME \nDataCam have been analyzed to find flame diameters. Of these the intensified camera is \nof most value and all of its images to date have been converted to video files and \nreviewed. Particular attention has been given to the PMT-2 measurements due to its \nsensitivity to wavelengths of 230 – 700 nm for CH2O* to investigate the presence of cool \nflames. PMT-2 mea"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-10",
+    "PSI-23",
+    "PSI-159"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to what a monitoring or simulation tool would need to measure or reproduce."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May help calibrate fire-safety simulation tools, after validation against the real experiments."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-10",
+   "theme": "Monitoring / control systems",
+   "topic": "modeling & simulation",
+   "question": "How were flame spread rates or flame size measured in the experiments?",
+   "title": "How were flame spread rates or flame size measured in the experiments",
+   "summary": "(PSI-25 BASS-II): Spread rates are obtained by finding the slope of the linear regression analysis after tracking the leading edge.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "(PSI-25 BASS-II): Spread rates are obtained by finding the slope of the linear regression analysis after tracking the leading edge.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.47",
+       "distance": 0.1785,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] ed to obtain the flame spread \nrate by finding the slope of the linear regression analysis. The resulting spread rates are plotted in \nFigure 2.19(b). The uncertainty in the spread rate calculations by tracking the leading edge in this manner \nhas been shown to be less than 5 percent except near ignition time when the flame bursts into its \nspreading form (Ref. 4). Once away from the ignition zone, averaging over 5 s of pro"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-25 BASS-II): Tracking the leading edge results in spread rate calculations with less than 5 percent uncertainty, except near the time of ignition.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.47",
+       "distance": 0.1785,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] ed to obtain the flame spread \nrate by finding the slope of the linear regression analysis. The resulting spread rates are plotted in \nFigure 2.19(b). The uncertainty in the spread rate calculations by tracking the leading edge in this manner \nhas been shown to be less than 5 percent except near ignition time when the flame bursts into its \nspreading form (Ref. 4). Once away from the ignition zone, averaging over 5 s of pro"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-23 ACME s-Flame): Measurements of flame-front velocity and flame structure will be obtained using imaging and radiometric systems as the flame spreads outward from a spherical burner.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Science Documents",
+       "file": "PSI-23_Science Documents_s-Flame SCR 200802.pdf",
+       "loc": "p.10",
+       "distance": 0.1814,
+       "excerpt": "[PSI-23 | ACME s-Flame | Science Documents | PSI-23_Science Documents_s-Flame SCR 200802.pdf] 9\n9\ns-Flame\nI. Spreading of Diffusion Flame \nSheets: Experimental\n• Fuel/diluent mixtures will be issued from the spherical \nburner and ignited at flow rates expected to form flames that \nevolve toward idealized steady-state conditions\n• As the flame spreads outward, transient measurements of \nflame-front velocity and flame structure will be obtained \nusing imaging and radiometric systems\n• The flame ch"
+      },
+      {
+       "id": "S7",
+       "psi": "PSI-23",
+       "acronym": "ACME s-Flame",
+       "doc_type": "Science Documents",
+       "file": "PSI-23_Science Documents_s-Flame SCR 200802.pdf",
+       "loc": "p.40",
+       "distance": 0.2005,
+       "excerpt": "[PSI-23 | ACME s-Flame | Science Documents | PSI-23_Science Documents_s-Flame SCR 200802.pdf] 39\n39\ns-Flame\nExperimental Approach (2/6)\n• Objective A – Flame Structure Evolution\n–Fuel/diluent mixtures will be issued from the spherical \nburner and ignited at flow rates expected to form flames \nthat evolve toward idealized steady-state conditions.\n–As the flame spreads outward, transient measurements of \nflame front velocity and flame structure will be obtained \nusing imaging and radiometric syste"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-10 ACME/Flame Design): Flame size was measured and found to be in quantitative agreement with numerical results using one-step chemistry.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.40",
+       "distance": 0.182,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] and decrease with increasing ambient oxygen concentration. The large \nspherical diffusion flames were observed to grow until extinction, while small \nflames were found to exhibit an asymptotically steady behavior due to their low \nradiative losses and faster transport. Experimental measurements of flame size \nwere in quantitative agreement with numerical results with one-step chemistry, \nprovided the diffusivity"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-10 ACME/Flame Design): Flame emissions of OH* at 310 nm were measured using a photomultiplier tube and a bandpass filter.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.40",
+       "distance": 0.182,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] and decrease with increasing ambient oxygen concentration. The large \nspherical diffusion flames were observed to grow until extinction, while small \nflames were found to exhibit an asymptotically steady behavior due to their low \nradiative losses and faster transport. Experimental measurements of flame size \nwere in quantitative agreement with numerical results with one-step chemistry, \nprovided the diffusivity"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-10 ACME/Flame Design): Fiber temperatures were measured using two-color ratio pyrometry to examine flame temperature changes over time.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-10",
+       "acronym": "ACME/Flame Design",
+       "doc_type": "Reports",
+       "file": "PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf",
+       "loc": "p.40",
+       "distance": 0.182,
+       "excerpt": "[PSI-10 | ACME/Flame Design | Reports | PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf] and decrease with increasing ambient oxygen concentration. The large \nspherical diffusion flames were observed to grow until extinction, while small \nflames were found to exhibit an asymptotically steady behavior due to their low \nradiative losses and faster transport. Experimental measurements of flame size \nwere in quantitative agreement with numerical results with one-step chemistry, \nprovided the diffusivity"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-25 BASS-II): Side-view tracking was used to measure the flame tip, flame base, and flame length for a 2.2-cm sample.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.103",
+       "distance": 0.1837,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] etermine the low-speed quenching limits as a \nfunction of O2 percentage. In some tests, the flame quenched quickly or was not ignited. These samples \nwere reused in additional tests as indicated in Table 7.1. These partially burned samples were ignited with \na retractable igniter on one side of the sample at the fuel burnout position. These reused samples in \ngeneral had a short unburned length and provided less quantitativ"
+      }
+     ]
+    },
+    {
+     "text": "(PSI-25 BASS-II): Video still images from an edge-view were used to observe flame development stages.",
+     "kind": "Observed",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-25",
+       "acronym": "BASS-II",
+       "doc_type": "Reports",
+       "file": "PSI-25_Reports_BASS-II Summary Report.pdf",
+       "loc": "p.103",
+       "distance": 0.1837,
+       "excerpt": "[PSI-25 | BASS-II | Reports | PSI-25_Reports_BASS-II Summary Report.pdf] etermine the low-speed quenching limits as a \nfunction of O2 percentage. In some tests, the flame quenched quickly or was not ignited. These samples \nwere reused in additional tests as indicated in Table 7.1. These partially burned samples were ignited with \na retractable igniter on one side of the sample at the fuel burnout position. These reused samples in \ngeneral had a short unburned length and provided less quantitativ"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-25",
+    "PSI-23",
+    "PSI-10"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to what a monitoring or simulation tool would need to measure or reproduce."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May help calibrate fire-safety simulation tools, after validation against the real experiments."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "ins-11",
+   "theme": "Potential terrestrial applications",
+   "topic": "diffusion flames",
+   "question": "Do the sources mention benefits of this research for combustion or fire safety on Earth?",
+   "title": "Do the sources mention benefits of this research for combustion or fire safety on Earth",
+   "summary": "For PSI-22 ACME E-FIELD Flames, controlling flames with electric fields can reduce the production of harmful pollutants in practical terrestrial combustion and may enable more efficient combustion.",
+   "evidence_label": "source_reported",
+   "outcome": "partial",
+   "claims": [
+    {
+     "text": "For PSI-22 ACME E-FIELD Flames, controlling flames with electric fields can reduce the production of harmful pollutants in practical terrestrial combustion and may enable more efficient combustion.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S1",
+       "psi": "PSI-22",
+       "acronym": "ACME E-FIELD Flames",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.214,
+       "excerpt": "[PSI-22 | ACME E-FIELD Flames | Metadata] Research impacts: The E-FIELD Flames research is not being conducted to serve any space applications, but it is possible that its findings could aid the development of future space-based combustion devices (e.g., for solid waste processing). The use of electric fields to control flames can reduce the production of harmful pollutants in practical terrestrial combustion. The combustion of fossil fuel is the primary human source of greenhouse gas and acid r"
+      }
+     ]
+    },
+    {
+     "text": "For PSI-117 Effect of External Thermo-Convective Perturbation, Earth benefits include advancing low-temperature combustion understanding relevant to engine knock, efficiency, and emissions, as well as delivering validated CFD tools transferrable to practical combustors.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S2",
+       "psi": "PSI-117",
+       "acronym": "",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2144,
+       "excerpt": "[PSI-117 | Effect of External Thermo-Convective Perturbation  | Metadata] Research impacts: Space Benefits: Potential to improve spacecraft fire-safety modeling by resolving cool-flame/extinction behavior in microgravity; leverages FLEX to define safer operating envelopes/materials. Earth Benefits: Advances low-temperature combustion understanding relevant to engine knock, efficiency, and emissions; delivers validated CFD tools transferrable to practical combustors."
+      }
+     ]
+    },
+    {
+     "text": "For PSI-106 SLICE, improved numerical models for flame behavior lead to more efficient combustion technologies on Earth, and insights into flame stability and soot formation aid in enhancing fire safety and reducing emissions.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-106",
+       "acronym": "SLICE",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2217,
+       "excerpt": "[PSI-106 | SLICE | Metadata] Research impacts: 1. Improved numerical models for flame behavior lead to more efficient combustion technologies on Earth. 2. Understanding soot formation aids in designing combustion systems with minimum emissions. 3. Insights into flame stability and behavior to enhance fire safety. 4. Findings will inform the development of cleaner, more efficient engines and industrial burners."
+      }
+     ]
+    },
+    {
+     "text": "For PSI-69 FLEX, insights have the potential to advance fire safety on Earth in confined environments such as submarines or high-altitude aircraft, while low-temperature combustion studies can inform advanced engine designs for improved fuel efficiency.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S5",
+       "psi": "PSI-69",
+       "acronym": "FLEX",
+       "doc_type": "Metadata",
+       "file": "metadata.json",
+       "loc": "Research impacts",
+       "distance": 0.2263,
+       "excerpt": "[PSI-69 | FLEX | Metadata] Research impacts: The research impacts and Earth benefits of the FLEX mission are significant and multifaceted. By enhancing our understanding of microgravity combustion, the mission directly contributes to improved fire safety protocols for future space missions, ensuring the safety of crew members in environments where traditional fire suppression methods may be ineffective. On Earth, the insights gained from these experiments have the potential to advance fire safet"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-22",
+    "PSI-117",
+    "PSI-106",
+    "PSI-69"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as basic flame science that fire-safety models can build on."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform basic flame models that feed fire-safety simulations."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them.",
+    "Part of the question is not supported by the sources: see the Not in the data line in the assistant."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  },
+  {
+   "id": "ins-12",
+   "theme": "Potential terrestrial applications",
+   "topic": "soot & smoke point",
+   "question": "What do the sources say about soot or smoke formation that matters beyond spacecraft?",
+   "title": "What do the sources say about soot or smoke formation that matters beyond spacecraft",
+   "summary": "In PSI-107 SPICE, soot is estimated to be responsible for up to 52,000 premature deaths in the U.S. and is believed to contribute to climate change and glacial melting.",
+   "evidence_label": "source_reported",
+   "outcome": "answered",
+   "claims": [
+    {
+     "text": "In PSI-107 SPICE, soot is estimated to be responsible for up to 52,000 premature deaths in the U.S. and is believed to contribute to climate change and glacial melting.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-107",
+       "acronym": "SPICE",
+       "doc_type": "Reports",
+       "file": "PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+       "loc": "p.11",
+       "distance": 0.1975,
+       "excerpt": "[PSI-107 | SPICE | Reports | PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLO] 1 \n\nChapter 1. Introduction \nSoot formation is an important but unresolved problem in combustion science. In \nmany circumstances soot production in flames is desired. Nevertheless, once soot \nescapes the flame and becomes smoke, it is rarely if ever wanted in a combustion \nsystem. Soot is estimated to be responsible for up to 52,000 premature deaths in the \nU.S. 1 and is believed to contribute to"
+      }
+     ]
+    },
+    {
+     "text": "According to PSI-107 SPICE, radiation from soot in flames enables reading by candlelight, provides heat to campers, and cooks food, but it can represent a loss of efficiency and increased heat loads in engines.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-107",
+       "acronym": "SPICE",
+       "doc_type": "Reports",
+       "file": "PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+       "loc": "p.11",
+       "distance": 0.1975,
+       "excerpt": "[PSI-107 | SPICE | Reports | PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLO] 1 \n\nChapter 1. Introduction \nSoot formation is an important but unresolved problem in combustion science. In \nmany circumstances soot production in flames is desired. Nevertheless, once soot \nescapes the flame and becomes smoke, it is rarely if ever wanted in a combustion \nsystem. Soot is estimated to be responsible for up to 52,000 premature deaths in the \nU.S. 1 and is believed to contribute to"
+      }
+     ]
+    },
+    {
+     "text": "PSI-107 SPICE reports that the spread of unwanted fires is in many cases through the radiation heat transfer originating from soot particles.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-107",
+       "acronym": "SPICE",
+       "doc_type": "Reports",
+       "file": "PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+       "loc": "p.11",
+       "distance": 0.1975,
+       "excerpt": "[PSI-107 | SPICE | Reports | PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLO] 1 \n\nChapter 1. Introduction \nSoot formation is an important but unresolved problem in combustion science. In \nmany circumstances soot production in flames is desired. Nevertheless, once soot \nescapes the flame and becomes smoke, it is rarely if ever wanted in a combustion \nsystem. Soot is estimated to be responsible for up to 52,000 premature deaths in the \nU.S. 1 and is believed to contribute to"
+      }
+     ]
+    },
+    {
+     "text": "In PSI-107 SPICE, smoking flames emit carbon monoxide, which is identified as the major cause of death in fires.",
+     "kind": "Context",
+     "citations": [
+      {
+       "id": "S3",
+       "psi": "PSI-107",
+       "acronym": "SPICE",
+       "doc_type": "Reports",
+       "file": "PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+       "loc": "p.11",
+       "distance": 0.1975,
+       "excerpt": "[PSI-107 | SPICE | Reports | PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLO] 1 \n\nChapter 1. Introduction \nSoot formation is an important but unresolved problem in combustion science. In \nmany circumstances soot production in flames is desired. Nevertheless, once soot \nescapes the flame and becomes smoke, it is rarely if ever wanted in a combustion \nsystem. Soot is estimated to be responsible for up to 52,000 premature deaths in the \nU.S. 1 and is believed to contribute to"
+      }
+     ]
+    }
+   ],
+   "supporting": [
+    "PSI-107"
+   ],
+   "app_interpretation": {
+    "label": "app_interpretation",
+    "text": "FlameIntel reads these results as relevant to smoke and soot behaviour, which matters for detection and air quality."
+   },
+   "potential_application": {
+    "label": "potential_application",
+    "text": "May inform understanding of smoke and soot production, relevant to detection and crew air-quality research."
+   },
+   "limitations": [
+    "Microgravity flight results are not directly valid for lunar, Mars or Earth gravity.",
+    "Test materials, airflow and atmosphere in the experiments may differ from a real habitat.",
+    "The claims come from retrieved passages only; other passages and documents may add or contradict them."
+   ],
+   "validation_required": "Yes. This does not validate a complete habitat system, certify any material or equipment, or predict real-world fire behaviour.",
+   "warnings": [],
+   "model": "gemini-3.5-flash"
+  }
+ ]
+}
